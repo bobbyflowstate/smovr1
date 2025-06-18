@@ -150,7 +150,7 @@ export default function Home() {
             </div>
             <div className="relative rounded-2xl overflow-hidden shadow-2xl">
               <Image
-                src="/images/flow-chart.png"
+                src="/images/flowchart2.png"
                 alt="LeadShield Lead Flow Process"
                 width={1200}
                 height={675}
