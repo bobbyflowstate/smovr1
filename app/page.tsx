@@ -175,6 +175,59 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Problems Section */}
+      <section className="py-20 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            {/* Section Label */}
+            <div className="flex justify-center mb-6">
+              <div className="inline-flex items-center gap-2 px-4 py-2 bg-white rounded-full shadow-sm">
+                <div className="w-5 h-5 bg-red-50 rounded-md flex items-center justify-center">
+                  <span className="text-red-700">⚠️</span>
+                </div>
+                <span className="text-sm font-medium text-gray-900">Industry Challenges</span>
+              </div>
+            </div>
+
+            <h2 className="text-4xl md:text-5xl font-bold text-center mb-12 text-gray-900">
+              What's Going Wrong<br/>
+              <span className="text-gray-600">(And Why You're Not Alone)</span>
+            </h2>
+
+            <div className="bg-white rounded-3xl p-12 shadow-sm relative overflow-hidden">
+              {/* Decorative Elements */}
+              <div className="absolute top-0 right-0 w-64 h-64 bg-red-50 rounded-full opacity-20 transform translate-x-1/2 -translate-y-1/2"></div>
+              <div className="absolute bottom-0 left-0 w-48 h-48 bg-emerald-50 rounded-full opacity-20 transform -translate-x-1/2 translate-y-1/2"></div>
+
+              <div className="relative z-10 space-y-6">
+                {[
+                  "Clinics lose 10–14% of revenue from missed or unfilled appointments",
+                  "Legacy systems like Epic and Athena don't adapt when things change",
+                  "Most platforms require manual rescheduling — or none at all",
+                  "Compliance fears keep teams frozen, even when logic-based solutions exist",
+                  "40–60% of canceled patients never return without immediate action"
+                ].map((point, index) => (
+                  <div key={index} className="flex items-start gap-4">
+                    <div className="flex-shrink-0 w-6 h-6 rounded-full bg-red-100 flex items-center justify-center mt-1">
+                      <svg className="w-4 h-4 text-red-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+                      </svg>
+                    </div>
+                    <p className="text-lg text-gray-700">{point}</p>
+                  </div>
+                ))}
+
+                <div className="mt-10 pt-8 border-t border-gray-100">
+                  <p className="text-xl text-emerald-700 font-medium text-center">
+                    We don't replace your system. We protect it from leaking money — with zero PHI exposure.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Demo Preview Section */}
       <section className="py-20 bg-emerald-50">
         <div className="container mx-auto px-4">
