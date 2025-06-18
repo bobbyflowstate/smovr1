@@ -124,7 +124,7 @@ export default function Home() {
             <div className="relative">
               <div className="p-8">
                 <Image
-                  src="/images/leadshield-heropain2.png"
+                  src="/images/empty-seats3.png"
                   alt="LeadShield Dashboard Preview"
                   width={800}
                   height={600}
@@ -137,7 +137,7 @@ export default function Home() {
       </section>
 
       {/* Leadflow Section */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 bg-emerald-50">
         <div className="container mx-auto px-4">
           <div className="max-w-5xl mx-auto">
             <div className="text-center mb-12">
@@ -150,7 +150,7 @@ export default function Home() {
             </div>
             <div className="relative rounded-2xl overflow-hidden shadow-2xl">
               <Image
-                src="/images/leadflow3.png"
+                src="/images/flow-chart.png"
                 alt="LeadShield Lead Flow Process"
                 width={1200}
                 height={675}
