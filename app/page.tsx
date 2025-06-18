@@ -142,10 +142,10 @@ export default function Home() {
           <div className="max-w-5xl mx-auto">
             <div className="text-center mb-12">
               <h2 className="text-4xl md:text-5xl font-bold mb-4 text-gray-900">
-                Your Staff is Already Overwhelmed
+                Your Staff Can't Chase Every Cancellation
               </h2>
               <p className="text-xl text-gray-600">
-                We automate patient rescheduling without changing your EHR or adding staff. <span className="font-bold">Set up takes minutes.</span>
+                Think of us like an ambulance outside the hospital. We don't enter the clinical system — we stabilize the chaos before it turns into lost revenue.
               </p>
             </div>
             <div className="relative rounded-2xl overflow-hidden shadow-2xl">
@@ -157,6 +157,11 @@ export default function Home() {
                 className="w-full h-auto"
                 priority
               />
+            </div>
+            <div className="flex justify-center pt-8">
+              <p className="text-xl text-gray-600 mt-4">
+                This is the "AFLAC of rescheduling" — a smart logic layer that protects your revenue the moment something breaks. No PHI. No AI chat. Just fast, compliant action where your EHR can't go.
+              </p>
             </div>
             <div className="mt-12 text-center">
               <Link
