@@ -80,24 +80,24 @@ export default function Home() {
                   className="rounded-2xl shadow-lg"
                 />
               </div>
-              <h1 className="text-5xl font-bold leading-tight mb-6 text-gray-900">
-              You're Losing $10K+ a Month in Missed Leads.<span className="text-red-500"> We Stop the Bleeding.</span>
+              <h1 className="text-4xl font-bold leading-tight mb-6 text-gray-900">
+              One Missed Appointment is $300K+ Lost.<br/><span className="text-red-500"> 6/10 Patients Never Reschedule.</span>
               </h1>
               <p className="text-xl text-gray-600 mb-8">
-              Real estate agents miss deals when they can't follow up fast enough — especially nights and weekends. LeadShield answers every call, qualifies every lead, and books appointments while you sleep. Pay a fraction, recover 10x.
+              Medical practices lose hundreds of thousands in revenue when patients no-show — especially for high-value procedures. We stop the leak with intelligent rescheduling automation that works with your existing systems. No extra staff needed.
               </p>
               <div className="flex flex-wrap gap-4">
                 <Link
                   href="/loss-calculator"
                   className="bg-emerald-700 text-white px-8 py-4 rounded-lg hover:bg-emerald-800 transition-colors duration-200 text-lg flex items-center"
                 >
-                  See How Much You're Losing 💰
+                  Calculate Your Loss in 10s 📊
                 </Link>
                 <Link
                   href="/book-demo"
                   className="bg-red-500 text-white px-8 py-4 rounded-lg border border-gray-200 hover:border-gray-300 transition-colors duration-200 text-lg flex items-center"
                 >
-                Stop the Bleeding
+                Stop the Revenue Leak
                 </Link>
               </div>
               <div className="mt-12 space-y-4">
@@ -105,19 +105,19 @@ export default function Home() {
                   <svg className="w-6 h-6 mr-3 text-emerald-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
-                  <span>Recover 5–6 Figures in Lost Revenue</span>
+                  <span>Recover 6 Figures in Lost Revenue</span>
                 </div>
                 <div className="flex items-center text-gray-600">
                   <svg className="w-6 h-6 mr-3 text-emerald-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
-                  <span>24/7 Lead Qualification & Booking</span>
+                  <span>Works With Your Existing EHR</span>
                 </div>
                 <div className="flex items-center text-gray-600">
                   <svg className="w-6 h-6 mr-3 text-emerald-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
-                  <span>Full service. We set you up in minutes.</span>
+                  <span>Set up in minutes. No IT headaches.</span>
                 </div>
               </div>
             </div>
@@ -142,10 +142,10 @@ export default function Home() {
           <div className="max-w-5xl mx-auto">
             <div className="text-center mb-12">
               <h2 className="text-4xl md:text-5xl font-bold mb-4 text-gray-900">
-                You're Not Slow. You're Just Swamped
+                Your Staff is Already Overwhelmed
               </h2>
               <p className="text-xl text-gray-600">
-                We fix that with 24/7 lead qualification + booking. <span className="font-bold">Set up for you in minutes.</span>
+                We automate patient rescheduling without changing your EHR or adding staff. <span className="font-bold">Set up takes minutes.</span>
               </p>
             </div>
             <div className="relative rounded-2xl overflow-hidden shadow-2xl">
@@ -291,7 +291,7 @@ export default function Home() {
           </div>
           
           <h2 className="text-5xl font-bold text-center mb-16 text-gray-900">
-            Why Real Estate Agents Trust LeadShield
+            Why Medical Practices Trust Our Solution
           </h2>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
@@ -299,12 +299,12 @@ export default function Home() {
             <div className="bg-white rounded-3xl p-10 shadow-sm">
               <div className="space-y-12">
                 {[
-                  "Recovers 5 – 6 figures in lost revenue",
-                  "24/7 lead qualification & booking",
-                  "Costs a fraction of what you're losing",
-                  "No tech headaches. Fully managed setup in minutes with real human support",
-                  "Speaks Spanish and English fluently",
-                  "Leads can go straight to your phone, calendar, or inbox.",
+                  "Recovers $300K+ in lost revenue annually",
+                  "Automated rescheduling that works 24/7",
+                  "Seamless integration with your existing EHR",
+                  "No technical complexity. Fully managed setup in minutes with dedicated support",
+                  "Multi-language patient communication",
+                  "Direct integration with your scheduling system",
                 ].map((benefit, index) => (
                   <div key={index} className="flex items-start gap-6">
                     <div className="flex-shrink-0">
@@ -348,10 +348,10 @@ export default function Home() {
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-900">
-                Get Started Without Paying a Dime Upfront
+                Start Recovering Lost Revenue Today
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                We'll set up your AI assistant and help you start catching leads — with no upfront fees or long-term commitment. You only pay once Joy starts working for you.
+                We'll integrate with your EHR and start recovering missed appointments — with no upfront fees or long-term commitment. You only pay once we prove the value.
               </p>
             </div>
 
@@ -360,12 +360,12 @@ export default function Home() {
               <div className="bg-white rounded-3xl p-10 shadow-sm">
                 <div className="space-y-6">
                   {[
-                    "No upfront payment - set up cost is billed later if you continue.",
-                    "Risk-free trial — pay only when Joy begins delivering results",
-                    "No contracts or lock-ins",
-                    "Your assistant is customized and integrated for you",
-                    "Support for voice, calendar, CRM, and texting available",
-                    "Flexible upgrades if and when you need them"
+                    "No upfront payment - setup costs billed after proven results",
+                    "HIPAA-compliant integration with your EHR",
+                    "No long-term contracts required",
+                    "Fully customized to your practice workflow",
+                    "Multi-language patient communication included",
+                    "Flexible upgrades as your practice grows"
                   ].map((point, index) => (
                     <div key={index} className="flex items-start gap-4">
                       <div className="flex-shrink-0 w-6 h-6 rounded-full bg-emerald-100 flex items-center justify-center mt-1">
@@ -451,20 +451,20 @@ export default function Home() {
             <div className="grid md:grid-cols-2 gap-8">
               {[
                 {
-                  q: "Where are your reviews?",
-                  a: "We're a new company, but you won't need five-star reviews — you'll see the proof for yourself, right away, with zero risk."
+                  q: "Is this HIPAA compliant?",
+                  a: "Yes, our solution is fully HIPAA compliant and we sign BAAs with all healthcare providers."
                 },
                 {
-                  q: "Do I need special hardware?",
-                  a: "Nope. Joy works with the phone number and tools you already use."
+                  q: "Which EHR systems do you support?",
+                  a: "We integrate with all major EHR systems including Epic, Cerner, Athena, and more. Our setup team handles all the technical details."
                 },
                 {
-                  q: "What if I don't get results?",
-                  a: "Then don't continue. No lock-ins. Pay only if it works."
+                  q: "How quickly can we get started?",
+                  a: "Most practices are up and running within 24-48 hours. We handle all the setup and integration work."
                 },
                 {
-                  q: "How does pricing work?",
-                  a: "Pricing is flexible and built around the services you choose. We focus on delivering real value — not locking you into one-size-fits-all plans."
+                  q: "What's the ROI?",
+                  a: "Most practices see 10-20x ROI within the first month. Use our calculator to see your potential returns based on your specific numbers."
                 }
               ].map((faq, index) => (
                 <div 
