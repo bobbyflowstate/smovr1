@@ -228,43 +228,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Demo Preview Section */}
-      <section className="py-20 bg-emerald-50">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div className="relative order-2 lg:order-1">
-              <div className="rounded-2xl shadow-2xl">
-                <div className="relative bg-emerald-900 rounded-lg overflow-hidden" style={{ aspectRatio: '4/3' }}>
-                  <Image
-                    src="/images/leadshield-joy1.png"
-                    alt="Joy AI Assistant"
-                    fill
-                    className="object-cover"
-                    style={{ objectPosition: 'top' }}
-                  />
-                </div>
-              </div>
-              {/* Decorative Elements */}
-              <div className="absolute -bottom-6 -left-6 w-24 h-24 bg-emerald-100 rounded-full -z-10"></div>
-              <div className="absolute -top-6 -right-6 w-32 h-32 bg-emerald-200 rounded-full -z-10"></div>
-            </div>
-            <div className="order-1 lg:order-2">
-              <h2 className="text-4xl font-bold leading-tight mb-6 text-gray-900">
-                Meet Joy — Your Lead Shield in Action
-              </h2>
-              <p className="text-xl text-gray-600 mb-8">
-                Experience how Joy qualifies, engages, and books real estate leads in English and Spanish. Hear her in action and see why top agents rely on her to protect their time and grow their business.
-              </p>
-              <Link
-                href="/demo"
-                className="inline-flex items-center bg-emerald-700 text-white px-8 py-4 rounded-lg hover:bg-emerald-800 transition-colors duration-200 text-lg"
-              >
-                👉 Listen to a Demo Now
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* Backstory Section */}
       <section className="py-20 bg-white">
