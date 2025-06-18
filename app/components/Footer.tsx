@@ -1,15 +1,9 @@
 import React from 'react';
 import Link from 'next/link';
-import Script from 'next/script';
 
 export default function Footer() {
   return (
     <footer className="bg-[#0A3B3B] text-gray-300 py-12">
-      <Script
-        src="https://beta.leadconnectorhq.com/loader.js"
-        data-resources-url="https://beta.leadconnectorhq.com/chat-widget/loader.js"
-        data-widget-id="683e8e16abf3b8f25e697236"
-      />
       <div className="container mx-auto px-4">
         {/* Links Grid */}
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
