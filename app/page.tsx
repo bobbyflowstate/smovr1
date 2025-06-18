@@ -333,6 +333,50 @@ export default function Home() {
         </div>
       </section>
 
+      {/* How It Works Section */}
+      <section className="py-20 bg-emerald-50">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            {/* Section Label */}
+            <div className="flex justify-center mb-6">
+              <div className="inline-flex items-center gap-2 px-4 py-2 bg-white rounded-full shadow-sm">
+                <div className="w-5 h-5 bg-[#E8FAE5] rounded-md flex items-center justify-center">
+                  <span className="text-emerald-700">💡</span>
+                </div>
+                <span className="text-sm font-medium text-gray-900">How It Works</span>
+              </div>
+            </div>
+
+            <h2 className="text-4xl md:text-5xl font-bold text-center mb-12 text-gray-900">
+              The Logic Layer That Solves<br/>the Real Problem
+            </h2>
+
+            <div className="bg-white rounded-3xl p-12 shadow-sm relative overflow-hidden">
+              {/* Decorative Elements */}
+              <div className="absolute top-0 right-0 w-64 h-64 bg-emerald-100 rounded-full opacity-20 transform translate-x-1/2 -translate-y-1/2"></div>
+              <div className="absolute bottom-0 left-0 w-48 h-48 bg-emerald-200 rounded-full opacity-20 transform -translate-x-1/2 translate-y-1/2"></div>
+
+              <div className="relative z-10">
+                <div className="prose prose-lg max-w-none">
+                  <p className="text-xl text-gray-700 mb-8 leading-relaxed">
+                    Most EHR systems — Epic, Athena, Health Gorilla — were built to protect data, not adapt in real time. They don't reschedule. They don't reallocate. They don't fill gaps.
+                  </p>
+                  
+                  <p className="text-xl text-gray-700 mb-12 leading-relaxed">
+                    That's where our platform comes in. It runs quietly outside your EHR — detecting breakdowns, filling empty appointments, and recovering lost revenue without PHI access or workflow disruption.
+                  </p>
+
+                  <div className="flex items-center justify-center gap-3 text-xl text-emerald-700">
+                    <span>Want exact technical details? See our most common questions below</span>
+                    <span className="text-2xl">👇</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Benefits Section */}
       <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
