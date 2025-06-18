@@ -535,11 +535,11 @@ export default function Home() {
       <section id="faq" className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            {/* Section Header */}
+            {/* Section Label */}
             <div className="flex justify-center mb-6">
               <div className="inline-flex items-center gap-2 px-4 py-2 bg-white rounded-full shadow-sm">
                 <div className="w-5 h-5 bg-[#E8FAE5] rounded-md flex items-center justify-center">
-                  <span className="text-emerald-700 text-sm">🤔</span>
+                  <span className="text-emerald-700">❓</span>
                 </div>
                 <span className="text-sm font-medium text-gray-900">FAQ</span>
               </div>
@@ -549,24 +549,27 @@ export default function Home() {
               Frequently Asked Questions
             </h2>
 
-            {/* FAQ Grid */}
-            <div className="grid md:grid-cols-2 gap-8">
+            <div className="space-y-6">
               {[
                 {
-                  q: "Is this HIPAA compliant?",
-                  a: "Yes, our solution is fully HIPAA compliant and we sign BAAs with all healthcare providers."
+                  q: "Do you need access to our EHR or clinical data?",
+                  a: "No. Our system runs fully outside your EHR. The platform connects to scheduling logic only — never PHI — keeping your compliance posture fully intact."
                 },
                 {
-                  q: "Which EHR systems do you support?",
-                  a: "We integrate with all major EHR systems including Epic, Cerner, Athena, and more. Our setup team handles all the technical details."
+                  q: "Will our staff need to change how they work?",
+                  a: "Not at all. Once configured, the system runs in the background — auto-reallocating openings and reducing no-shows. No new portals. No new steps."
                 },
                 {
-                  q: "How quickly can we get started?",
-                  a: "Most practices are up and running within 24-48 hours. We handle all the setup and integration work."
+                  q: "How is this deployed across multiple locations or specialties?",
+                  a: "It's modular and scalable — from solo practices to national groups. Multi-location support and optional waitlist logic are built-in."
                 },
                 {
-                  q: "What's the ROI?",
-                  a: "Most practices see 10-20x ROI within the first month. Use our calculator to see your potential returns based on your specific numbers."
+                  q: "What about SMS compliance?",
+                  a: "Already using reminders? You're likely pre-approved. If not, we guide your team through A2P registration during onboarding to ensure compliant delivery from day one."
+                },
+                {
+                  q: "How is pricing handled?",
+                  a: "Pricing depends on your practice complexity, patient volume, and scheduling logic. Because this system directly protects revenue, it's designed to deliver ROI that far exceeds its cost. We'll share clear terms after a brief discovery — and only move forward if the value is unmistakable."
                 }
               ].map((faq, index) => (
                 <div 
@@ -593,12 +596,7 @@ export default function Home() {
             {/* Bottom CTA */}
             <div className="mt-16 text-center">
               <p className="text-gray-600 mb-6">Still have questions?</p>
-              <Link
-                href="/contact"
-                className="inline-flex items-center bg-white text-gray-900 px-8 py-4 rounded-lg border border-gray-200 hover:border-gray-300 transition-colors duration-200 text-lg shadow-sm"
-              >
-                Get in Touch
-              </Link>
+              <p className="text-gray-600">Complete the secure form below and we'll follow up confidentially.</p>
             </div>
           </div>
         </div>
