@@ -8,10 +8,9 @@ import Link from 'next/link'
 export default function LossCalculator() {
   const [appointmentsPerMonth, setAppointmentsPerMonth] = useState(100)
   const [cancellationRate, setCancellationRate] = useState(15)
-  const [percentNotRefilled, setPercentNotRefilled] = useState(40)
   const [patientLTV, setPatientLTV] = useState(3000)
   const [percentNeverReturn, setPercentNeverReturn] = useState(25)
-  
+
   // Cancellation rate options
   const cancellationRateOptions = [
     { value: 5, label: '5%' },
@@ -24,18 +23,6 @@ export default function LossCalculator() {
     { value: 40, label: '40%' },
   ]
 
-  // Not refilled rate options
-  const notRefilledOptions = [
-    { value: 20, label: '20%' },
-    { value: 30, label: '30%' },
-    { value: 40, label: '40%' },
-    { value: 50, label: '50%' },
-    { value: 60, label: '60%' },
-    { value: 70, label: '70%' },
-    { value: 80, label: '80%' },
-    { value: 90, label: '90%' },
-  ]
-
   // Never return options
   const neverReturnOptions = [
     { value: 10, label: 'Almost never (10%)' },
@@ -44,7 +31,7 @@ export default function LossCalculator() {
     { value: 75, label: 'Most (75%)' },
     { value: 95, label: 'Almost always (95%)' },
   ]
-
+  
   // Add custom styles for the range inputs
   const rangeInputStyles = `
     [type='range']::-webkit-slider-thumb {
@@ -53,7 +40,7 @@ export default function LossCalculator() {
       width: 25px;
       height: 25px;
       border-radius: 50%;
-      background: #047857; /* emerald-700 */
+      background: #047857;
       cursor: pointer;
       border: 2px solid white;
       box-shadow: 0 2px 4px rgba(0,0,0,0.1);
@@ -62,7 +49,7 @@ export default function LossCalculator() {
       width: 25px;
       height: 25px;
       border-radius: 50%;
-      background: #047857; /* emerald-700 */
+      background: #047857;
       cursor: pointer;
       border: 2px solid white;
       box-shadow: 0 2px 4px rgba(0,0,0,0.1);
@@ -70,14 +57,13 @@ export default function LossCalculator() {
   `
 
   // Calculate annual revenue lost
-  // Formula: (appointments_per_month) × (cancellation_rate) × (percent_not_refilled) × (patient_LTV) × (percent_never_return) × 52 weeks
+  // New formula: (monthly_appointments × cancellation_rate × patient_LTV × never_return_rate × 12 months)
   const calculateAnnualRevenueLost = () => {
     const monthlyAppointments = appointmentsPerMonth
     const cancelRate = cancellationRate / 100
-    const notRefilled = percentNotRefilled / 100
     const neverReturn = percentNeverReturn / 100
     
-    const annualRevenue = monthlyAppointments * cancelRate * notRefilled * patientLTV * (1 / neverReturn) * 12
+    const annualRevenue = monthlyAppointments * cancelRate * patientLTV * neverReturn * 12
 
     return Number(annualRevenue).toLocaleString(undefined, {
       minimumFractionDigits: 2,
@@ -98,7 +84,7 @@ export default function LossCalculator() {
               Calculate Revenue Lost to Cancellations
             </h1>
             <p className="text-xl text-gray-600 mb-12">
-              Understand the true financial impact of appointment cancellations on your medical practice
+              Understand the true financial impact of appointment cancellations and patient churn on your medical practice
             </p>
           </div>
 
@@ -146,26 +132,6 @@ export default function LossCalculator() {
                 </div>
               </div>
 
-              {/* Percent Not Refilled Dropdown */}
-              <div>
-                <label className="block text-lg font-medium text-gray-900 mb-4">
-                  What percentage of cancelled slots are not refilled?
-                </label>
-                <div className="flex items-center gap-4">
-                  <select
-                    value={percentNotRefilled}
-                    onChange={(e) => setPercentNotRefilled(Number(e.target.value))}
-                    className="w-full p-3 bg-white border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500"
-                  >
-                    {notRefilledOptions.map((option) => (
-                      <option key={option.value} value={option.value}>
-                        {option.label}
-                      </option>
-                    ))}
-                  </select>
-                </div>
-              </div>
-
               {/* Patient LTV Input */}
               <div>
                 <label className="block text-lg font-medium text-gray-900 mb-4">
@@ -198,7 +164,7 @@ export default function LossCalculator() {
               {/* Percent Never Return Dropdown */}
               <div>
                 <label className="block text-lg font-medium text-gray-900 mb-4">
-                  How often do cancelled patients never return?
+                  Of patients who cancel, how many never return?
                 </label>
                 <div className="flex items-center gap-4">
                   <select
@@ -218,10 +184,13 @@ export default function LossCalculator() {
 
             {/* Results Section */}
             <div className="mt-12 p-6 bg-gray-900 rounded-xl text-white">
-              <h3 className="text-xl mb-4">Estimated annual revenue lost:</h3>
+              <h3 className="text-xl mb-4">Total lifetime value lost from patients who cancel and never return:</h3>
               <div className="text-5xl font-bold">
                 ${calculateAnnualRevenueLost()}
               </div>
+              <p className="mt-4 text-gray-400">
+                This represents the total future revenue you'll lose from patients who cancel and never return to your practice over the course of a year.
+              </p>
             </div>
           </div>
 
@@ -232,11 +201,11 @@ export default function LossCalculator() {
               <ul className="space-y-4">
                 <li className="flex items-start gap-3">
                   <span className="text-red-500">❌</span>
-                  <span>Lost revenue from unfilled appointment slots</span>
+                  <span>Lost immediate revenue from cancelled appointments</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="text-red-500">❌</span>
-                  <span>Decreased patient retention and lifetime value</span>
+                  <span>Long-term impact of patient churn</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="text-red-500">❌</span>
@@ -258,7 +227,7 @@ export default function LossCalculator() {
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="text-emerald-500">✓</span>
-                  <span>Predictive analytics to reduce no-shows</span>
+                  <span>Patient engagement tools to reduce churn</span>
                 </li>
               </ul>
             </div>
@@ -270,7 +239,7 @@ export default function LossCalculator() {
               Ready to Reduce Cancellations?
             </h2>
             <p className="text-xl text-gray-600 mb-8">
-              Our solution helps medical practices minimize cancellations and maximize revenue. 
+              Our solution helps medical practices minimize cancellations and maximize patient retention. 
               Start recovering lost revenue today.
             </p>
             <Link
