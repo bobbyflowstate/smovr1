@@ -24,7 +24,7 @@ export default function Header({ showBackToHome = false }: HeaderProps) {
         {!showBackToHome ? (
           <>
             <div className="hidden md:flex items-center space-x-8">
-              <button 
+              {/* <button 
                 onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
                 className="text-gray-700 hover:text-gray-900"
               >
@@ -41,14 +41,14 @@ export default function Header({ showBackToHome = false }: HeaderProps) {
                 className="text-gray-700 hover:text-gray-900"
               >
                 FAQ
-              </button>
+              </button> */}
             </div>
             <div>
               <Link 
                 href="/loss-calculator"
                 className="bg-white text-gray-900 px-6 py-2 rounded-full shadow-lg hover:shadow-xl transition-all duration-200"
               >
-                How Much $ Are You Losing?
+                Calculate Annual Revenue Lost
               </Link>
             </div>
           </>
