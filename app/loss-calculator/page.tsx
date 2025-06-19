@@ -6,7 +6,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 export default function LossCalculator() {
-  const [appointmentsPerMonth, setAppointmentsPerMonth] = useState(100)
+  const [appointmentsPerYear, setAppointmentsPerYear] = useState(100)
   const [cancellationRate, setCancellationRate] = useState(15)
   const [patientLTV, setPatientLTV] = useState(3000)
   const [percentNeverReturn, setPercentNeverReturn] = useState(25)
@@ -15,21 +15,23 @@ export default function LossCalculator() {
   const cancellationRateOptions = [
     { value: 5, label: '5%' },
     { value: 10, label: '10%' },
-    { value: 15, label: '15%' },
     { value: 20, label: '20%' },
-    { value: 25, label: '25%' },
     { value: 30, label: '30%' },
-    { value: 35, label: '35%' },
     { value: 40, label: '40%' },
+    { value: 50, label: '50%' },
+    { value: 60, label: '60%' },
+    { value: 70, label: '70%' },
+    { value: 80, label: '80%' },
+    { value: 90, label: '90%' },
   ]
 
   // Never return options
   const neverReturnOptions = [
-    { value: 10, label: 'Almost never (10%)' },
-    { value: 25, label: 'Sometimes (25%)' },
+    { value: 10, label: 'Some (10%)' },
+    { value: 25, label: 'A Lot (25%)' },
     { value: 50, label: 'About half (50%)' },
     { value: 75, label: 'Most (75%)' },
-    { value: 95, label: 'Almost always (95%)' },
+    { value: 95, label: 'Almost all (95%)' },
   ]
   
   // Add custom styles for the range inputs
@@ -59,11 +61,11 @@ export default function LossCalculator() {
   // Calculate annual revenue lost
   // New formula: (monthly_appointments × cancellation_rate × patient_LTV × never_return_rate × 12 months)
   const calculateAnnualRevenueLost = () => {
-    const monthlyAppointments = appointmentsPerMonth
+    const yearlyAppointments = appointmentsPerYear
     const cancelRate = cancellationRate / 100
     const neverReturn = percentNeverReturn / 100
     
-    const annualRevenue = monthlyAppointments * cancelRate * patientLTV * neverReturn * 12
+    const annualRevenue = yearlyAppointments * cancelRate * patientLTV * neverReturn
 
     return Number(annualRevenue).toLocaleString(undefined, {
       minimumFractionDigits: 2,
@@ -84,8 +86,20 @@ export default function LossCalculator() {
               Calculate Revenue Lost to Cancellations
             </h1>
             <p className="text-xl text-gray-600 mb-12">
-              Understand the true financial impact of appointment cancellations and patient churn on your medical practice
+              Understand the true financial impact of appointment cancellations and patient churn on your medical practice.
             </p>
+          </div>
+
+          {/* Statistics Section */}
+          <div className="max-w-3xl mx-auto mb-12">
+            <div className="bg-gray-50 rounded-xl p-8">
+              <p className="text-gray-700 mb-4">
+                In personal injury, recovery, and mental health care, up to <span className="font-semibold">37–60% of canceled patients never return</span>.
+              </p>
+              <p className="text-gray-700">
+                And while not specific to healthcare, Harvard Business Review shows that response time dramatically impacts engagement — with <span className="font-semibold">80% lost after five minutes</span>, and leads <span className="font-semibold">10× less likely to respond after 30 minutes</span>.
+              </p>
+            </div>
           </div>
 
           {/* Calculator Card */}
@@ -97,18 +111,18 @@ export default function LossCalculator() {
               {/* Appointments Per Month Slider */}
               <div>
                 <label className="block text-lg font-medium text-gray-900 mb-4">
-                  How many appointments do you schedule per month?
+                  How many new Personal Injury cases do you get per year?
                 </label>
                 <div className="flex items-center gap-4">
                   <input 
                     type="range"
                     min="0"
-                    max="300"
-                    value={appointmentsPerMonth}
-                    onChange={(e) => setAppointmentsPerMonth(Number(e.target.value))}
+                    max="1000"
+                    value={appointmentsPerYear}
+                    onChange={(e) => setAppointmentsPerYear(Number(e.target.value))}
                     className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer"
                   />
-                  <span className="text-xl font-medium w-24">{appointmentsPerMonth}</span>
+                  <span className="text-xl font-medium w-24">{appointmentsPerYear}</span>
                 </div>
               </div>
 
