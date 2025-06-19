@@ -91,7 +91,7 @@ export default function Home() {
                   href="/loss-calculator"
                   className="bg-emerald-700 text-white px-8 py-4 rounded-lg hover:bg-emerald-800 transition-colors duration-200 text-lg flex items-center"
                 >
-                  Calculate Your Loss in 10s 📊
+                  Calculate Your Loss 💸
                 </Link>
                 <Link
                   href="/book-demo"
