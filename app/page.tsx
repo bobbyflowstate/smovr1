@@ -253,42 +253,31 @@ export default function Home() {
               <div className="absolute bottom-0 left-0 w-48 h-48 bg-emerald-200 rounded-full opacity-20 transform -translate-x-1/2 translate-y-1/2"></div>
 
               <div className="relative z-10">
-                <p className="text-xl text-gray-700 mb-8 leading-relaxed">
-                Small businesses are drowning in missed calls, cold leads, and tech they don't have time to learn. We built LeadShield to change that — to give business owners their time back, help them close more deals, and free them to build the life they actually want: more freedom, more joy, more control.
-                </p>
-
                 <div className="flex flex-col md:flex-row md:items-start gap-6 mb-8">
                   <div className="flex-shrink-0 mx-auto md:mx-0">
                     <Image
                       src="/images/kevin-profile.jpg"
-                      alt="Kevin - Founder"
+                      alt="Kevin Stratmann - Founder"
                       width={120}
                       height={120}
                       className="rounded-full"
                     />
                   </div>
                   <div className="text-center md:text-left">
-                    <p className="text-xl text-gray-700 mb-6 leading-relaxed">
-                      I'm Kevin — author of Shift Success AI. After decades of guiding people and teams through personal transformation, I partnered with <a href="https://about.me/ashokraju" target="_blank" rel="noopener noreferrer" className="text-emerald-700 hover:underline">Ashok Kidraj, a seasoned software engineer</a>, to build tools that combine voice AI with emotional intelligence.
+                    <p className="text-xl text-gray-700 mb-8 leading-relaxed">
+                      Kevin Stratmann is a creative systems thinker and author of Shift Success with AI. He partnered with <a href="https://about.me/ashokraju" target="_blank" rel="noopener noreferrer" className="text-emerald-700 hover:underline">Ashok, a former software founder with several startup exits (Google, Dropbox)</a>, to build what major EHRs missed:
                     </p>
                   </div>
                 </div>
 
-                <p className="text-xl text-gray-700 mb-8 leading-relaxed">
-                  Together, we created an assistant that:
-                </p>
-
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
-                  {["Qualifies leads", "Books appointments", "Runs 24/7", "Sounds warm, human, and real"].map((feature, index) => (
-                    <div key={index} className="flex items-center gap-2 text-gray-700">
-                      <span className="text-emerald-700">✔️</span>
-                      <span>{feature}</span>
-                    </div>
-                  ))}
+                <div className="bg-emerald-50 rounded-xl p-6 mb-8">
+                  <p className="text-xl text-emerald-700 font-medium">
+                    ➡️ A lightweight, outside-the-firewall automation layer that protects revenue without disrupting clinical systems.
+                  </p>
                 </div>
 
                 <p className="text-xl text-gray-700 italic">
-                  It's automation designed for people doing meaningful work — who still care how they show up.
+                  "They're not selling hype. They're solving real scheduling breakdowns — with tools that work where legacy systems can't."
                 </p>
               </div>
             </div>
