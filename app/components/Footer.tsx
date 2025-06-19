@@ -12,9 +12,9 @@ export default function Footer() {
             <h3 className="text-white font-semibold mb-4">Quick Links</h3>
             <ul className="space-y-2">
               <li><Link href="/" className="hover:text-white transition-colors">Home</Link></li>
-              {/* <li><Link href="/demo" className="hover:text-white transition-colors">Listen to Demo</Link></li> */}
-              <li><Link href="/book-demo" className="hover:text-white transition-colors">Book a Demo</Link></li>
-              {/* {/* <li><Link href="/pricing" className="hover:text-white transition-colors">Pricing</Link></li> */}
+              <li><Link href="/loss-calculator" className="hover:text-white transition-colors">Loss Calculator</Link></li>
+              <li><Link href="/book-demo" className="hover:text-white transition-colors">Discovery Call</Link></li>
+              {/* <li><Link href="/pricing" className="hover:text-white transition-colors">Pricing</Link></li> */}
             </ul>
           </div>
 
