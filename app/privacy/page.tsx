@@ -17,7 +17,7 @@ export default function Privacy() {
               Privacy Policy
             </h1>
             <p className="text-gray-600 text-lg mb-4">
-              Last Updated: 2-16-2025
+              Last Updated: June 16, 2025
             </p>
           </div>
         </div>
@@ -32,10 +32,13 @@ export default function Privacy() {
               <div className="mb-12">
                 <h2 className="text-2xl font-semibold text-gray-900 mb-4">1. Introduction</h2>
                 <p className="text-gray-600 mb-4">
-                  Welcome to LeadShield ("Company," "we," "us," or "our"). Your privacy is important to us, and we are committed to protecting your personal data. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our AI-powered voice assistant services.
+                  Welcome to Smovr ("Company," "we," "us," or "our"). We are committed to protecting your privacy and maintaining transparency in how we collect, use, and safeguard your information when you engage with our services.
                 </p>
                 <p className="text-gray-600 mb-4">
-                  By using our services, you consent to the collection and use of information as outlined in this policy.
+                  This Privacy Policy explains how we handle data in connection with our scheduling logic automation tools, web forms, and communication systems — all of which are designed to operate outside of PHI and within industry compliance standards.
+                </p>
+                <p className="text-gray-600 mb-4">
+                  By using our website or services, you consent to the practices outlined in this policy.
                 </p>
               </div>
 
@@ -43,57 +46,74 @@ export default function Privacy() {
               <div className="mb-12">
                 <h2 className="text-2xl font-semibold text-gray-900 mb-4">2. Information We Collect</h2>
                 
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">2.1 Information You Provide</h3>
+                <h3 className="text-xl font-semibold text-gray-900 mb-3">2.1 Information You Provide Directly</h3>
                 <p className="text-gray-600 mb-4">
-                  We collect personal information when you interact with our AI assistant, including:
+                  We may collect personal or business information when you:
                 </p>
                 <ul className="list-none space-y-2 mb-4">
-                  <li className="text-gray-600">Name (for personalized responses)</li>
-                  <li className="text-gray-600">Phone number (for call handling and follow-ups)</li>
-                  <li className="text-gray-600">Email address (for communication and appointment confirmations)</li>
-                  <li className="text-gray-600">Business details (if provided during conversations)</li>
+                  <li className="text-gray-600">Fill out a contact or demo request form</li>
+                  <li className="text-gray-600">Engage with scheduling or setup conversations</li>
+                  <li className="text-gray-600">Sign up for services or consultations</li>
+                </ul>
+                <p className="text-gray-600 mb-4">This may include:</p>
+                <ul className="list-none space-y-2 mb-4">
+                  <li className="text-gray-600">Name</li>
+                  <li className="text-gray-600">Work email</li>
+                  <li className="text-gray-600">Clinic or company name</li>
+                  <li className="text-gray-600">Phone number</li>
+                  <li className="text-gray-600">General practice info (e.g., size, specialty, number of appointments)</li>
                 </ul>
 
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">2.2 Information Collected Automatically</h3>
+                <h3 className="text-xl font-semibold text-gray-900 mb-3">2.2 System Activity (Non-PHI)</h3>
                 <p className="text-gray-600 mb-4">
-                  Our AI assistant may automatically collect:
+                  Our platform does not access or store protected health information (PHI). However, for operational purposes, we may securely process:
                 </p>
                 <ul className="list-none space-y-2 mb-4">
-                  <li className="text-gray-600">Call logs and timestamps</li>
-                  <li className="text-gray-600">Call transcripts for quality assurance and service improvement</li>
-                  <li className="text-gray-600">Interaction history (to enhance responses)</li>
+                  <li className="text-gray-600">Appointment slot data (time/date only — not patient names)</li>
+                  <li className="text-gray-600">Status flags (e.g., cancelled, no-show, filled)</li>
+                  <li className="text-gray-600">Non-identifiable calendar activity used to drive logic-based rescheduling</li>
                 </ul>
 
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">2.3 Cookies and Tracking Technologies</h3>
+                <h3 className="text-xl font-semibold text-gray-900 mb-3">2.3 Website and Form Data</h3>
                 <p className="text-gray-600 mb-4">
-                  If you visit our website, we may collect cookies or other tracking data to enhance user experience and measure engagement.
+                  We may collect usage data when you visit https://smovr.com, including:
                 </p>
+                <ul className="list-none space-y-2 mb-4">
+                  <li className="text-gray-600">Browser type and visit duration</li>
+                  <li className="text-gray-600">Page views and button clicks</li>
+                  <li className="text-gray-600">Cookies (for analytics and form autofill)</li>
+                  <li className="text-gray-600">UTM tracking (when clicking from emails or campaigns)</li>
+                </ul>
               </div>
 
               {/* How We Use Your Information */}
               <div className="mb-12">
                 <h2 className="text-2xl font-semibold text-gray-900 mb-4">3. How We Use Your Information</h2>
-                <p className="text-gray-600 mb-4">We use the collected information to:</p>
+                <p className="text-gray-600 mb-4">We use collected data to:</p>
                 <ul className="list-none space-y-2 mb-4">
                   <li className="flex items-start">
                     <span className="text-green-500 mr-2">✅</span>
-                    <span className="text-gray-600">Provide AI-powered call handling, appointment scheduling, and customer engagement</span>
+                    <span className="text-gray-600">Evaluate scheduling inefficiencies and ROI estimates</span>
                   </li>
                   <li className="flex items-start">
                     <span className="text-green-500 mr-2">✅</span>
-                    <span className="text-gray-600">Improve customer service by analyzing interactions</span>
+                    <span className="text-gray-600">Provide tailored demos, proposals, or onboarding support</span>
                   </li>
                   <li className="flex items-start">
                     <span className="text-green-500 mr-2">✅</span>
-                    <span className="text-gray-600">Ensure compliance with regulatory requirements</span>
+                    <span className="text-gray-600">Configure your automation logic and SMS delivery</span>
                   </li>
                   <li className="flex items-start">
                     <span className="text-green-500 mr-2">✅</span>
-                    <span className="text-gray-600">Prevent fraud, enhance security, and maintain service reliability</span>
+                    <span className="text-gray-600">Respond to form submissions or support inquiries</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-green-500 mr-2">✅</span>
+                    <span className="text-gray-600">Ensure messaging compliance during registration (if needed)</span>
                   </li>
                 </ul>
                 <p className="text-gray-600 mb-4">
-                  We do not sell your personal information.
+                  We do not use your data to train open-ended AI systems. We never access PHI or clinical patient records.
                 </p>
               </div>
 
@@ -103,19 +123,19 @@ export default function Privacy() {
                 <ul className="list-none space-y-2 mb-4">
                   <li className="flex items-start">
                     <span className="text-green-500 mr-2">✔️</span>
-                    <span className="text-gray-600"><strong>With Service Providers</strong> – We use third-party providers (e.g., Twilio for voice services) to facilitate our AI assistant. These providers follow strict security and confidentiality measures.</span>
+                    <span className="text-gray-600"><strong>Service Providers</strong> — We work with trusted infrastructure partners (e.g., Twilio for compliant SMS delivery) who are contractually bound to uphold security and confidentiality.</span>
                   </li>
                   <li className="flex items-start">
                     <span className="text-green-500 mr-2">✔️</span>
-                    <span className="text-gray-600"><strong>Legal Compliance</strong> – If required by law, court order, or to prevent fraud or abuse, we may disclose necessary data.</span>
+                    <span className="text-gray-600"><strong>Legal or Regulatory Requirements</strong> — We may share limited data when required to comply with applicable laws, subpoenas, or enforcement obligations.</span>
                   </li>
                   <li className="flex items-start">
                     <span className="text-green-500 mr-2">✔️</span>
-                    <span className="text-gray-600"><strong>Business Transfers</strong> – In the event of a merger, sale, or acquisition, your information may be transferred under the same privacy commitments.</span>
+                    <span className="text-gray-600"><strong>Business Transitions</strong> — In the event of a company sale, merger, or restructuring, non-sensitive business information may be transferred under the same privacy protections.</span>
                   </li>
                   <li className="flex items-start">
                     <span className="text-green-500 mr-2">✔️</span>
-                    <span className="text-gray-600"><strong>User Consent</strong> – We will obtain explicit consent before sharing information for any additional purposes.</span>
+                    <span className="text-gray-600"><strong>User Consent</strong> — We never sell your information. We will always request your consent before using your data in new ways.</span>
                   </li>
                 </ul>
               </div>
@@ -123,27 +143,31 @@ export default function Privacy() {
               {/* Your Privacy Rights */}
               <div className="mb-12">
                 <h2 className="text-2xl font-semibold text-gray-900 mb-4">5. Your Privacy Rights</h2>
-                <p className="text-gray-600 mb-4">Depending on your location, you may have the following rights:</p>
+                <p className="text-gray-600 mb-4">Depending on your region, you may request the following at any time:</p>
                 <ul className="list-none space-y-2 mb-4">
                   <li className="flex items-start">
                     <span className="text-blue-500 mr-2">🔹</span>
-                    <span className="text-gray-600"><strong>Access & Correction:</strong> Request a copy of your personal data or ask for corrections</span>
+                    <span className="text-gray-600"><strong>Access</strong> — View what data we've collected about you</span>
                   </li>
                   <li className="flex items-start">
                     <span className="text-blue-500 mr-2">🔹</span>
-                    <span className="text-gray-600"><strong>Opt-Out of AI Calls:</strong> You can stop AI interactions anytime by requesting opt-out via email</span>
+                    <span className="text-gray-600"><strong>Correction</strong> — Update inaccurate or outdated information</span>
                   </li>
                   <li className="flex items-start">
                     <span className="text-blue-500 mr-2">🔹</span>
-                    <span className="text-gray-600"><strong>Data Deletion:</strong> Request that we erase your data unless legally required to retain it</span>
+                    <span className="text-gray-600"><strong>Deletion</strong> — Request your data be removed (unless retention is required by law)</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-blue-500 mr-2">🔹</span>
+                    <span className="text-gray-600"><strong>Opt-Out</strong> — Stop receiving communications or future demos</span>
                   </li>
                 </ul>
                 <p className="text-gray-600 mb-4">
-                  To exercise these rights, contact us at:
+                  To exercise your rights, contact us at:
                   <br />
                   <span className="inline-flex items-center mt-2">
                     <span className="mr-2">📩</span>
-                    info@leadshield.xyz
+                    kevin@smovr.com
                   </span>
                 </p>
               </div>
@@ -151,36 +175,52 @@ export default function Privacy() {
               {/* Data Security */}
               <div className="mb-12">
                 <h2 className="text-2xl font-semibold text-gray-900 mb-4">6. Data Security</h2>
+                <p className="text-gray-600 mb-4">We take your data security seriously:</p>
                 <ul className="list-none space-y-2 mb-4">
                   <li className="flex items-start">
                     <span className="text-green-500 mr-2">✔️</span>
-                    <span className="text-gray-600">Encryption for stored and transmitted data</span>
+                    <span className="text-gray-600">All transmissions are encrypted using SSL protocols</span>
                   </li>
                   <li className="flex items-start">
                     <span className="text-green-500 mr-2">✔️</span>
-                    <span className="text-gray-600">Restricted access to authorized personnel only</span>
+                    <span className="text-gray-600">Stored data is limited and protected with role-based access</span>
                   </li>
                   <li className="flex items-start">
                     <span className="text-green-500 mr-2">✔️</span>
-                    <span className="text-gray-600">Compliance with TCPA, CCPA, and GDPR for data protection</span>
+                    <span className="text-gray-600">We maintain compliance with TCPA, CAN-SPAM, CCPA, and GDPR as applicable</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-green-500 mr-2">✔️</span>
+                    <span className="text-gray-600">We do not process or store any PHI (Protected Health Information)</span>
                   </li>
                 </ul>
               </div>
 
+              {/* Updates to This Policy */}
+              <div className="mb-12">
+                <h2 className="text-2xl font-semibold text-gray-900 mb-4">7. Updates to This Policy</h2>
+                <p className="text-gray-600 mb-4">
+                  We may update this Privacy Policy to reflect service changes or legal requirements. When material changes occur, we will notify users via email or our website.
+                </p>
+                <p className="text-gray-600 mb-4">
+                  Continued use of our services after updates implies acceptance of the revised terms.
+                </p>
+              </div>
+
               {/* Contact Information */}
               <div className="mb-12">
-                <h2 className="text-2xl font-semibold text-gray-900 mb-4">7. Contact Information</h2>
+                <h2 className="text-2xl font-semibold text-gray-900 mb-4">8. Contact Information</h2>
                 <p className="text-gray-600 mb-4">
-                  If you have any questions about this Privacy Policy, contact us at:
+                  If you have any questions or concerns regarding this policy, reach out to:
                 </p>
                 <div className="bg-gray-50 p-6 rounded-lg">
                   <p className="text-gray-600 flex items-center mb-2">
                     <span className="mr-2">📩</span>
-                    Email: info@leadshield.xyz
+                    Email: kevin@smovr.com
                   </p>
                   <p className="text-gray-600 flex items-center">
                     <span className="mr-2">🌐</span>
-                    Website: https://leadshield.xyz
+                    Website: https://smovr.com
                   </p>
                 </div>
               </div>
