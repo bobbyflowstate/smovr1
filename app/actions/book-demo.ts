@@ -8,26 +8,20 @@ const WEBHOOK_URL = process.env.GHL_WEBHOOK
 
 type FormData = {
   name: string
-  phone: string
-  smsConsent: boolean
-  marketingConsent: boolean
+  email: string
+  clinicName: string
 }
 
 export async function submitBookingForm(formData: FormData) {
   try {
-    // Validate phone number format
-    if (!formData.phone.match(/^\+1\d{10}$/)) {
-      return { error: 'Invalid phone number format' }
+    // Validate email format
+    if (!formData.email.match(/^[^\s@]+@[^\s@]+\.[^\s@]+$/)) {
+      return { error: 'Invalid email format' }
     }
 
     // Validate name
     if (!formData.name || formData.name.length < 2 || formData.name.length > 100) {
       return { error: 'Name must be between 2 and 100 characters' }
-    }
-
-    // Validate required SMS consent
-    if (!formData.smsConsent) {
-      return { error: 'SMS consent is required' }
     }
 
     const response = await fetch(WEBHOOK_URL, {

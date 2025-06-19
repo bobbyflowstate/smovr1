@@ -12,7 +12,7 @@ export default function Footer() {
             <h3 className="text-white font-semibold mb-4">Quick Links</h3>
             <ul className="space-y-2">
               <li><Link href="/" className="hover:text-white transition-colors">Home</Link></li>
-              <li><Link href="/demo" className="hover:text-white transition-colors">Listen to Demo</Link></li>
+              {/* <li><Link href="/demo" className="hover:text-white transition-colors">Listen to Demo</Link></li> */}
               <li><Link href="/book-demo" className="hover:text-white transition-colors">Book a Demo</Link></li>
               {/* {/* <li><Link href="/pricing" className="hover:text-white transition-colors">Pricing</Link></li> */}
             </ul>
@@ -53,7 +53,7 @@ export default function Footer() {
         {/* Company Info */}
         <div className="border-t border-gray-700 pt-8">
           <div className="flex flex-col space-y-2 text-sm">
-            <p>LeadShield.xyz is a service operated by Kevin P. Stratmann, DBA SMOVR.</p>
+            <p>SMOVR.com is a service operated by Kevin P. Stratmann, DBA SMOVR.</p>
             <p>Business Address: 253 Garth Road unit 5G Scarsdale NY 10583</p>
             <p>© 2025 Kevin P. Stratmann, DBA SMOVR. All rights reserved.</p>
           </div>

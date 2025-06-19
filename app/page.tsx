@@ -89,13 +89,13 @@ export default function Home() {
               <div className="flex flex-wrap gap-4">
                 <Link
                   href="/loss-calculator"
-                  className="bg-emerald-700 text-white px-8 py-4 rounded-lg hover:bg-emerald-800 transition-colors duration-200 text-lg flex items-center"
+                  className="bg-red-500 text-white px-8 py-4 rounded-lg hover:bg-red-600 transition-colors duration-200 text-lg flex items-center"
                 >
                   Calculate Your Loss 💸
                 </Link>
                 <Link
                   href="/book-demo"
-                  className="bg-red-500 text-white px-8 py-4 rounded-lg border border-gray-200 hover:border-gray-300 transition-colors duration-200 text-lg flex items-center"
+                  className="bg-emerald-700 text-white px-8 py-4 rounded-lg border border-gray-200 hover:border-gray-300 transition-colors duration-200 text-lg flex items-center"
                 >
                 Stop the Revenue Leak
                 </Link>
@@ -165,10 +165,10 @@ export default function Home() {
             </div>
             <div className="mt-12 text-center">
               <Link
-                href="/book-demo"
+                href="/loss-calculator"
                 className="inline-flex items-center bg-red-500 text-white px-8 py-4 rounded-lg hover:bg-red-600 transition-colors duration-200 text-lg md:text-2xl shadow-lg"
               >
-                Recover $10K+ in Revenue Now
+                Calculate Your Loss 💸
               </Link>
             </div>
           </div>
