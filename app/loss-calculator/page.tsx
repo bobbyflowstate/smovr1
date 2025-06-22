@@ -59,13 +59,26 @@ export default function LossCalculator() {
   `
 
   // Calculate annual revenue lost
-  // New formula: (monthly_appointments × cancellation_rate × patient_LTV × never_return_rate × 12 months)
   const calculateAnnualRevenueLost = () => {
     const yearlyAppointments = appointmentsPerYear
     const cancelRate = cancellationRate / 100
     const neverReturn = percentNeverReturn / 100
     
     const annualRevenue = yearlyAppointments * cancelRate * patientLTV * neverReturn
+
+    return Number(annualRevenue).toLocaleString(undefined, {
+      minimumFractionDigits: 2,
+      maximumFractionDigits: 2
+    })
+  }
+
+  // Calculate industry standard (15% cancellation rate)
+  const calculateIndustryStandard = () => {
+    const yearlyAppointments = appointmentsPerYear
+    const industryRate = 0.15 // 15% industry standard
+    const neverReturn = percentNeverReturn / 100
+    
+    const annualRevenue = yearlyAppointments * industryRate * patientLTV * neverReturn
 
     return Number(annualRevenue).toLocaleString(undefined, {
       minimumFractionDigits: 2,
@@ -149,7 +162,7 @@ export default function LossCalculator() {
               {/* Patient LTV Input */}
               <div>
                 <label className="block text-lg font-medium text-gray-900 mb-4">
-                  What is your average patient lifetime value?
+                  What is your average remaining balance per patient?
                 </label>
                 <div className="flex items-center gap-4">
                   <div className="relative w-full">
@@ -171,7 +184,7 @@ export default function LossCalculator() {
                   </div>
                 </div>
                 <p className="mt-2 text-sm text-gray-600">
-                  If unsure: most clinics fall between $1,500–$5,000. For PI cases: $20K+.
+                  Average remaining balance for treatment. Most clinics: $1,500–$5,000. For PI cases: $20K+.
                 </p>
               </div>
 
@@ -197,14 +210,33 @@ export default function LossCalculator() {
             </div>
 
             {/* Results Section */}
-            <div className="mt-12 p-6 bg-gray-900 rounded-xl text-white">
-              <h3 className="text-xl mb-4">Total lifetime value lost from patients who cancel and never return:</h3>
-              <div className="text-5xl font-bold">
-                ${calculateAnnualRevenueLost()}
+            <div className="mt-12 space-y-6">
+              {/* User's Calculation */}
+              <div className="p-6 bg-gray-900 rounded-xl text-white">
+                <h3 className="text-xl mb-4">Your estimated remaining balance lost from patients who cancel and never return:</h3>
+                <div className="text-5xl font-bold">
+                  ${calculateAnnualRevenueLost()}
+                </div>
+                <p className="mt-4 text-gray-400">
+                  Based on your {cancellationRate}% cancellation rate
+                </p>
               </div>
-              <p className="mt-4 text-gray-400">
-                This represents the total future revenue you'll lose from patients who cancel and never return to your practice over the course of a year.
-              </p>
+
+              {/* Industry Standard Comparison */}
+              <div className="p-6 bg-amber-50 border-2 border-amber-200 rounded-xl">
+                <h3 className="text-xl mb-4 text-amber-800">Industry benchmark (15% cancellation rate):</h3>
+                <div className="text-5xl font-bold text-amber-700">
+                  ${calculateIndustryStandard()}
+                </div>
+                <p className="mt-4 text-amber-700">
+                  Industry benchmark: Most practices lose ~15% of revenue to cancellations (MGMA, 2021–2023).
+                </p>
+                {cancellationRate < 7 && (
+                  <p className="mt-3 text-sm text-amber-800 bg-amber-100 p-3 rounded-lg">
+                    ⚠️ If your estimate is well below industry benchmarks, consider reviewing actual records for accuracy.
+                  </p>
+                )}
+              </div>
             </div>
           </div>
 

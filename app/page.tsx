@@ -81,17 +81,17 @@ export default function Home() {
                 />
               </div>
               <h1 className="text-4xl font-bold leading-tight mb-6 text-gray-900">
-              One Missed Appointment is $300K+ Lost.<br/><span className="text-red-500"> 6/10 Patients Never Reschedule.</span>
+              The numbers don't lie.<br/><span className="text-red-500">Clinics lose up to 15% of annual revenue to cancellations — according to MGMA.</span>
               </h1>
               <p className="text-xl text-gray-600 mb-8">
-              Medical practices lose hundreds of thousands in revenue when patients no-show — especially for high-value procedures. We stop the leak with intelligent rescheduling automation that works with your existing systems. No extra staff needed.
+              That's $600,000 in preventable loss for a $4M/year practice. And it's often overlooked by busy staff and optimistic reporting.
               </p>
               <div className="flex flex-wrap gap-4">
                 <Link
                   href="/loss-calculator"
                   className="bg-red-500 text-white px-8 py-4 rounded-lg hover:bg-red-600 transition-colors duration-200 text-lg flex items-center"
                 >
-                  Calculate Your Loss 💸
+                  👉 Use our 30-second calculator to estimate your own
                 </Link>
                 <Link
                   href="/book-demo"
