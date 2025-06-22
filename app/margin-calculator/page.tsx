@@ -319,7 +319,7 @@ export default function MarginCalculator() {
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="text-emerald-500">📉</span>
-                  <span>25% improvement in no-show rates</span>
+                  <span>Join the successful 22% of practices</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="text-emerald-500">🎯</span>
