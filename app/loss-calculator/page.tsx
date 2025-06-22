@@ -101,7 +101,7 @@ export default function LossCalculator() {
               Calculate Revenue Lost to Cancellations
             </h1>
             <p className="text-xl text-gray-600 mb-12">
-              Understand the true financial impact of appointment cancellations and patient churn on your medical practice.
+              Discover the hidden financial cost of appointment cancellations and patient drop-off in your clinic — and what it could be costing you each year.
             </p>
           </div>
 
@@ -109,10 +109,10 @@ export default function LossCalculator() {
           <div className="max-w-3xl mx-auto mb-12">
             <div className="bg-gray-50 rounded-xl p-8">
               <p className="text-gray-700 mb-4">
-                In personal injury, recovery, and mental health care, up to <span className="font-semibold">37–60% of canceled patients never return</span>.
+                In personal injury, recovery, and mental health care, <span className="font-semibold">37–60% of canceled patients never return</span> for care.
               </p>
               <p className="text-gray-700">
-                And while not specific to healthcare, Harvard Business Review shows that response time dramatically impacts engagement — with <span className="font-semibold">80% lost after five minutes</span>, and leads <span className="font-semibold">10× less likely to respond after 30 minutes</span>.
+                And while not specific to healthcare, Harvard Business Review shows that responding within <span className="font-semibold">5 minutes leads to 21× more qualified leads</span> — but after 30 minutes, they're <span className="font-semibold">10× less likely to respond</span> at all.
               </p>
             </div>
           </div>
