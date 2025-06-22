@@ -81,10 +81,10 @@ export default function Home() {
                 />
               </div>
               <h1 className="text-4xl font-bold leading-tight mb-6 text-gray-900">
-              The numbers don't lie.<br/><span className="text-red-500">Clinics lose up to 15% of annual revenue to cancellations — according to MGMA.</span>
+              The numbers don't lie.<br/><span className="text-red-500">Average practice loses $150,000 annually to no-shows and cancellations — according to MGMA.</span>
               </h1>
               <p className="text-xl text-gray-600 mb-8">
-              That's $600,000 in preventable loss for a $4M/year practice. And it's often overlooked by busy staff and optimistic reporting.
+              With no-show rates averaging 5-7%, that revenue loss is often invisible to busy staff and optimistic reporting. The industry loses $150+ billion per year.
               </p>
               <div className="flex flex-wrap gap-4">
                 <Link

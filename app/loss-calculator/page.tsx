@@ -7,7 +7,7 @@ import Link from 'next/link'
 
 export default function LossCalculator() {
   const [appointmentsPerYear, setAppointmentsPerYear] = useState(100)
-  const [cancellationRate, setCancellationRate] = useState(15)
+  const [cancellationRate, setCancellationRate] = useState(7)
   const [patientLTV, setPatientLTV] = useState(3000)
   const [percentNeverReturn, setPercentNeverReturn] = useState(25)
 
@@ -15,7 +15,8 @@ export default function LossCalculator() {
   const cancellationRateOptions = [
     { value: 5, label: '5%' },
     { value: 10, label: '10%' },
-    { value: 15, label: '15% (Industry Standard)' },
+    { value: 7, label: '7% (MGMA Average)' },
+    { value: 15, label: '15%' },
     { value: 20, label: '20%' },
     { value: 30, label: '30%' },
     { value: 40, label: '40%' },
@@ -73,10 +74,10 @@ export default function LossCalculator() {
     })
   }
 
-  // Calculate industry standard (15% cancellation rate)
+  // Calculate industry standard (7% MGMA average no-show rate)
   const calculateIndustryStandard = () => {
     const yearlyAppointments = appointmentsPerYear
-    const industryRate = 0.15 // 15% industry standard
+    const industryRate = 0.07 // 7% MGMA average no-show rate
     const neverReturn = percentNeverReturn / 100
     
     const annualRevenue = yearlyAppointments * industryRate * patientLTV * neverReturn
@@ -225,16 +226,16 @@ export default function LossCalculator() {
 
               {/* Industry Standard Comparison */}
               <div className="p-6 bg-amber-50 border-2 border-amber-200 rounded-xl">
-                <h3 className="text-xl mb-4 text-amber-800">Industry benchmark (15% cancellation rate):</h3>
+                <h3 className="text-xl mb-4 text-amber-800">MGMA industry benchmark (7% no-show rate):</h3>
                 <div className="text-5xl font-bold text-amber-700">
                   ${calculateIndustryStandard()}
                 </div>
                 <p className="mt-4 text-amber-700">
-                  Industry benchmark: Most practices lose ~15% of revenue to cancellations (MGMA, 2021–2023).
+                  MGMA data shows practices average 5-7% no-show rates. Average practice loses $150,000 annually.
                 </p>
-                {cancellationRate < 7 && (
+                {cancellationRate < 5 && (
                   <p className="mt-3 text-sm text-amber-800 bg-amber-100 p-3 rounded-lg">
-                    ⚠️ If your estimate is well below industry benchmarks, consider reviewing actual records for accuracy.
+                    ⚠️ If your estimate is well below industry benchmarks (5-7%), consider reviewing actual records for accuracy.
                   </p>
                 )}
               </div>
