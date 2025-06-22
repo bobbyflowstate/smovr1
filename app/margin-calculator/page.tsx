@@ -252,26 +252,7 @@ export default function MarginCalculator() {
             </div>
           </div>
 
-          {/* Hidden Problem Section */}
-          <div className="max-w-3xl mx-auto mb-12">
-            <div className="bg-amber-50 rounded-xl p-8 border-2 border-amber-200">
-              <h3 className="text-xl font-bold text-amber-800 mb-4">Why Most Practices Accept These Losses:</h3>
-              <div className="grid md:grid-cols-2 gap-6">
-                <div>
-                  <div className="text-3xl font-bold text-amber-700">58%</div>
-                  <div className="text-sm text-amber-600">Don't charge no-show fees</div>
-                </div>
-                <div>
-                  <div className="text-3xl font-bold text-amber-700">85%</div>
-                  <div className="text-sm text-amber-600">Use no technology to prevent no-shows</div>
-                </div>
-              </div>
-              <p className="text-amber-700 mt-4">
-                <strong>The result:</strong> Only 22% of practices improve their no-show rates. 
-                The other 78% accept losses as "part of healthcare" and see no improvement.
-              </p>
-            </div>
-          </div>
+
 
           {/* Trust Building & Verification */}
           <div className="max-w-3xl mx-auto mb-12">
@@ -301,11 +282,7 @@ export default function MarginCalculator() {
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="text-red-500">😤</span>
-                  <span>Staff frustrated with constant rescheduling</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="text-red-500">⏰</span>
-                  <span>Empty appointment slots stay empty</span>
+                  <span>Staff overwhelmed with administrative tasks</span>
                 </li>
               </ul>
             </div>
@@ -314,20 +291,16 @@ export default function MarginCalculator() {
               <h3 className="text-2xl font-bold text-emerald-800 mb-4">Taking Action (Our Solution)</h3>
               <ul className="space-y-4">
                 <li className="flex items-start gap-3">
-                  <span className="text-emerald-500">💰</span>
-                  <span>Recover ${roi.recoveredRevenue} annually</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="text-emerald-500">📉</span>
-                  <span>Join the successful 22% of practices</span>
-                </li>
-                <li className="flex items-start gap-3">
                   <span className="text-emerald-500">🎯</span>
                   <span>Intelligent automation prevents no-shows</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <span className="text-emerald-500">⚡</span>
-                  <span>Works with existing systems</span>
+                  <span className="text-emerald-500">📉</span>
+                  <span>Staff freed up to focus on patients</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-emerald-500">💰</span>
+                  <span>Recover ${roi.recoveredRevenue} annually</span>
                 </li>
               </ul>
             </div>
