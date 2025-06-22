@@ -18,10 +18,10 @@ export default function Contact() {
                 <span className="text-sm font-medium text-gray-900">Get in Touch</span>
               </div>
               <h1 className="text-4xl md:text-5xl font-bold mb-6 text-gray-900">
-                Questions? Ideas? Just Want to Say Hi?
+                Questions? Ideas? Let's Connect
               </h1>
               <p className="text-xl text-gray-600">
-                We'd love to hear from you. Whether you're curious about Joy, need help with setup, or want to explore if LeadShield is right for your business — we're here.
+                We'd love to hear from you. Whether you're curious about our solution, need help with setup, or want to explore if SMOVR is right for your practice — we're here.
               </p>
             </div>
 
@@ -34,10 +34,10 @@ export default function Contact() {
                 </h2>
                 <p className="text-gray-600 mb-2">You can reach us directly at:</p>
                 <p className="text-2xl font-semibold text-emerald-700 mb-4">
-                  (914) 895-5336
+                  (855) SMOVR-01
                 </p>
                 <p className="text-gray-600">
-                  We're happy to chat and point you in the right direction.
+                  We're available Monday through Friday, 9am - 5pm EST.
                 </p>
               </div>
 
@@ -46,28 +46,28 @@ export default function Contact() {
                 <h2 className="text-2xl font-semibold text-gray-900 mb-4 flex items-center">
                   <span className="mr-2">📩</span> Email Us
                 </h2>
-                <p className="text-gray-600 mb-2">Prefer email? Just shoot us a message:</p>
+                <p className="text-gray-600 mb-2">Send us a message anytime:</p>
                 <p className="text-2xl font-semibold text-emerald-700 mb-4">
-                  info@leadshield.xyz
+                  hello@smovr.com
                 </p>
                 <p className="text-gray-600">
-                  We usually respond within 1 business day.
+                  We respond to all inquiries within 1 business day.
                 </p>
               </div>
 
-              {/* Not Sure Where to Start */}
+              {/* Book a Demo */}
               <div className="bg-gray-50 rounded-3xl p-8">
                 <h2 className="text-2xl font-semibold text-gray-900 mb-4 flex items-center">
-                  <span className="mr-2">🧠</span> Not Sure Where to Start?
+                  <span className="mr-2">🎯</span> Ready to Stop Losing Revenue?
                 </h2>
                 <p className="text-gray-600 mb-6">
-                  If you're looking to try Joy for yourself, book a demo here and she'll call you directly.
+                  See how SMOVR can help your practice recover lost revenue from no-shows.
                 </p>
                 <Link
                   href="/book-demo"
                   className="inline-flex items-center bg-emerald-700 text-white px-8 py-4 rounded-lg hover:bg-emerald-800 transition-colors duration-200 text-lg"
                 >
-                  Book a Demo with Joy
+                  Book a Demo
                 </Link>
               </div>
             </div>
@@ -75,7 +75,7 @@ export default function Contact() {
             {/* Footer Note */}
             <div className="text-center">
               <p className="text-gray-600 text-lg">
-                We're a small team, and we genuinely care about every conversation — reach out anytime.
+                We're dedicated to helping healthcare practices thrive — reach out anytime.
               </p>
             </div>
           </div>

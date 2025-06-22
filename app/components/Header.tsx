@@ -13,7 +13,7 @@ export default function Header({ showBackToHome = false }: HeaderProps) {
           <Link href="/">
             <Image
               src="/logo.svg"
-              alt="LeadShield Logo"
+              alt="SMOVR Logo"
               width={120}
               height={40}
               className="h-8 w-auto"
@@ -23,32 +23,26 @@ export default function Header({ showBackToHome = false }: HeaderProps) {
         
         {!showBackToHome ? (
           <>
-            <div className="hidden md:flex items-center space-x-8">
-              {/* <button 
-                onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-                className="text-gray-700 hover:text-gray-900"
+            <div className="hidden md:flex items-center space-x-6">
+              <Link 
+                href="/loss-calculator"
+                className="text-gray-700 hover:text-gray-900 transition-colors duration-200"
               >
-                Home
-              </button>
-              <button 
-                onClick={() => document.getElementById('pricing')?.scrollIntoView({ behavior: 'smooth' })}
-                className="text-gray-700 hover:text-gray-900"
+                Revenue Calculator
+              </Link>
+              {/* <Link 
+                href="/margin-calculator"
+                className="text-gray-700 hover:text-gray-900 transition-colors duration-200"
               >
-                Pricing
-              </button>
-              <button 
-                onClick={() => document.getElementById('faq')?.scrollIntoView({ behavior: 'smooth' })}
-                className="text-gray-700 hover:text-gray-900"
-              >
-                FAQ
-              </button> */}
+                Revenue Calculator 2.0
+              </Link> */}
             </div>
             <div>
               <Link 
-                href="/loss-calculator"
-                className="bg-white text-gray-900 px-6 py-2 rounded-full shadow-lg hover:shadow-xl transition-all duration-200"
+                href="/book-demo"
+                className="bg-emerald-700 text-white px-6 py-2 rounded-full shadow-lg hover:shadow-xl transition-all duration-200"
               >
-                Calculate Annual Revenue Lost
+                Book Demo
               </Link>
             </div>
           </>

@@ -9,8 +9,8 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  title: "LeadShield - AI Assistant for Real Estate Agents",
-  description: "Your 24/7 AI assistant that filters leads and books appointments",
+  title: "SMOVR",
+  description: "SMOVR is a revenue recovery solution for healthcare practices",
 };
 
 export default function RootLayout({

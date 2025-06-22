@@ -71,33 +71,34 @@ export default function Home() {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <div className="mb-8">
+              <div className="mb-2">
                 <Image
                   src="/app-icon.svg"
-                  alt="LeadShield App Icon"
+                  alt="SMOVR App Icon"
                   width={80}
                   height={80}
                   className="rounded-2xl shadow-lg"
                 />
               </div>
-              <h1 className="text-4xl font-bold leading-tight mb-6 text-gray-900">
-              The numbers don't lie.<br/><span className="text-red-500">Clinics lose up to 15% of annual revenue to cancellations — according to MGMA.</span>
+              <h1 className="text-5xl font-bold leading-tight mb-6 text-gray-900">
+              <br/>A $4M clinic <span className="text-red-500">quietly loses $200,000 a year</span> from canceled visits.
               </h1>
               <p className="text-xl text-gray-600 mb-8">
-              That's $600,000 in preventable loss for a $4M/year practice. And it's often overlooked by busy staff and optimistic reporting.
+                MGMA reports 5–7% no-shows — but what about the 14% who cancel and never return?<br/>
+                <span className="text-red-500">The numbers don't lie.</span> Most staff never see it. Optimistic reporting buries it. <Link href="/loss-calculator" className="text-emerald-700 hover:text-emerald-800 hover:underline">Our calculator exposes it</Link>.
               </p>
               <div className="flex flex-wrap gap-4">
                 <Link
                   href="/loss-calculator"
                   className="bg-red-500 text-white px-8 py-4 rounded-lg hover:bg-red-600 transition-colors duration-200 text-lg flex items-center"
                 >
-                  👉 Use our 30-second calculator to estimate your own
+                  Estimate Your Loss
                 </Link>
                 <Link
                   href="/book-demo"
                   className="bg-emerald-700 text-white px-8 py-4 rounded-lg border border-gray-200 hover:border-gray-300 transition-colors duration-200 text-lg flex items-center"
                 >
-                Stop the Revenue Leak
+                👉 Stop the Revenue Leak
                 </Link>
               </div>
               <div className="mt-12 space-y-4">
@@ -125,7 +126,7 @@ export default function Home() {
               <div className="p-8">
                 <Image
                   src="/images/empty-seats3.png"
-                  alt="LeadShield Dashboard Preview"
+                  alt="SMOVR Dashboard Preview"
                   width={800}
                   height={600}
                   className="rounded-lg"
@@ -151,7 +152,7 @@ export default function Home() {
             <div className="relative rounded-2xl overflow-hidden shadow-2xl">
               <Image
                 src="/images/flowchart2.png"
-                alt="LeadShield Lead Flow Process"
+                alt="SMOVR Lead Flow Process"
                 width={1200}
                 height={675}
                 className="w-full h-auto"
