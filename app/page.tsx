@@ -74,7 +74,7 @@ export default function Home() {
               <div className="mb-8">
                 <Image
                   src="/app-icon.svg"
-                  alt="LeadShield App Icon"
+                  alt="SMOVR App Icon"
                   width={80}
                   height={80}
                   className="rounded-2xl shadow-lg"
@@ -125,7 +125,7 @@ export default function Home() {
               <div className="p-8">
                 <Image
                   src="/images/empty-seats3.png"
-                  alt="LeadShield Dashboard Preview"
+                  alt="SMOVR Dashboard Preview"
                   width={800}
                   height={600}
                   className="rounded-lg"
@@ -151,7 +151,7 @@ export default function Home() {
             <div className="relative rounded-2xl overflow-hidden shadow-2xl">
               <Image
                 src="/images/flowchart2.png"
-                alt="LeadShield Lead Flow Process"
+                alt="SMOVR Lead Flow Process"
                 width={1200}
                 height={675}
                 className="w-full h-auto"

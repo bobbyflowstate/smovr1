@@ -13,7 +13,7 @@ export default function Header({ showBackToHome = false }: HeaderProps) {
           <Link href="/">
             <Image
               src="/logo.svg"
-              alt="LeadShield Logo"
+              alt="SMOVR Logo"
               width={120}
               height={40}
               className="h-8 w-auto"
