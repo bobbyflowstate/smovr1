@@ -34,7 +34,7 @@ export default function Header({ showBackToHome = false }: HeaderProps) {
                 href="/margin-calculator"
                 className="text-gray-700 hover:text-gray-900 transition-colors duration-200"
               >
-                Margin Calculator
+                Revenue Calculator 2.0
               </Link>
             </div>
             <div>
