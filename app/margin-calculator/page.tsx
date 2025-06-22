@@ -185,12 +185,16 @@ export default function MarginCalculator() {
                     </div>
                     <input
                       type="number"
-                      value={avgAppointmentValue}
-                      min="50"
-                      max="2000"
-                      step="25"
-                      onChange={(e) => setAvgAppointmentValue(Number(e.target.value))}
-                      className="w-full p-3 pl-7 bg-white border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500"
+                      value={avgAppointmentValue || ''}
+                      min="0"
+                      max="1000000"
+                      onChange={(e) => {
+                        const value = e.target.value === '' ? 0 : Number(e.target.value)
+                        if (value >= 0 && value <= 1000000) {
+                          setAvgAppointmentValue(value)
+                        }
+                      }}
+                      className="w-full p-3 pl-7 bg-white border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
                     />
                   </div>
                 </div>
