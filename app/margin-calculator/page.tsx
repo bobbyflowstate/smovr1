@@ -112,12 +112,12 @@ export default function MarginCalculator() {
                   <div className="text-sm text-red-600">Practices saw increases</div>
                 </div>
                 <div>
-                  <div className="text-3xl font-bold text-red-700">22%</div>
-                  <div className="text-sm text-red-600">Improved without action</div>
+                  <div className="text-3xl font-bold text-red-700">Only 22%</div>
+                  <div className="text-sm text-red-600">Achieved improvement</div>
                 </div>
               </div>
               <p className="text-red-700 mt-4 text-center">
-                <strong>Translation:</strong> Most practices are losing more money each year and doing nothing about it.
+                <strong>Translation:</strong> 78% of practices either stay flat or get worse. Only 22% achieve improvement through targeted action.
               </p>
             </div>
           </div>
@@ -267,8 +267,8 @@ export default function MarginCalculator() {
                 </div>
               </div>
               <p className="text-amber-700 mt-4">
-                <strong>The result:</strong> Practices that take action see 25% improvement in no-show rates. 
-                The majority just accept losses as "part of healthcare."
+                <strong>The result:</strong> Only 22% of practices improve their no-show rates. 
+                The other 78% accept losses as "part of healthcare" and see no improvement.
               </p>
             </div>
           </div>
@@ -339,7 +339,7 @@ export default function MarginCalculator() {
               Stop Losing ${results.annualLoss} Every Year
             </h2>
             <p className="text-xl text-gray-600 mb-8">
-              Join the 25% of practices that took action and improved their no-show rates. 
+              Join the successful 22% of practices that achieve improvement through targeted action. 
               Solution pays for itself by month {roi.breakEvenMonths}, then generates ${roi.quarterlyProfit} pure profit every quarter.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
