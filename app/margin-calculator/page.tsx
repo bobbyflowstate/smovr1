@@ -101,7 +101,7 @@ export default function MarginCalculator() {
           {/* Industry Reality Check */}
           <div className="max-w-3xl mx-auto mb-12">
             <div className="bg-red-50 rounded-xl p-8 border-2 border-red-200">
-              <h3 className="text-xl font-bold text-red-800 mb-4">Industry Reality Check (MGMA 2023-2024)</h3>
+              <h3 className="text-xl font-bold text-red-800 mb-4">Industry Reality Check (<Link href="https://www.mgma.com/mgma-stat/no-show-fees-in-medical-practices-on-the-rise-to-balance-bumpy-attendance-rates" target="_blank" className="underline hover:text-red-600">MGMA 2023-2024</Link>)</h3>
               <div className="grid md:grid-cols-3 gap-4 text-center">
                 <div>
                   <div className="text-3xl font-bold text-red-700">6.81%</div>
