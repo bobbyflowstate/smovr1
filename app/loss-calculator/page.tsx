@@ -126,7 +126,7 @@ export default function LossCalculator() {
               {/* Appointments Per Month Slider */}
               <div>
                 <label className="block text-lg font-medium text-gray-900 mb-4">
-                  How many new Personal Injury cases do you get per year?
+                  How many new patients do you see per year?
                 </label>
                 <div className="flex items-center gap-4">
                   <input 
