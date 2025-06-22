@@ -30,12 +30,12 @@ export default function Header({ showBackToHome = false }: HeaderProps) {
               >
                 Revenue Calculator
               </Link>
-              <Link 
+              {/* <Link 
                 href="/margin-calculator"
                 className="text-gray-700 hover:text-gray-900 transition-colors duration-200"
               >
                 Revenue Calculator 2.0
-              </Link>
+              </Link> */}
             </div>
             <div>
               <Link 
