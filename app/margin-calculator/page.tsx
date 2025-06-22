@@ -63,13 +63,18 @@ export default function MarginCalculator() {
     const solutionCost = 5000 // $5K annual cost (internal calculation)
     const recoveredRevenue = results.annualLossNumber * 0.75 // Conservative 75% recovery
     const netBenefit = recoveredRevenue - solutionCost
-    const roiMultiple = Math.round(netBenefit / solutionCost)
+    const quarterlyRecovery = recoveredRevenue / 4
+    const breakEvenMonths = Math.ceil(solutionCost / (quarterlyRecovery / 3))
+    const firstYearProfit = netBenefit
+    const quarterlyProfit = (recoveredRevenue - solutionCost) / 4
 
     return {
-      solutionCost: "< $10,000", // Display as less than 10K
       recoveredRevenue: recoveredRevenue.toLocaleString(undefined, { minimumFractionDigits: 0, maximumFractionDigits: 0 }),
       netBenefit: netBenefit.toLocaleString(undefined, { minimumFractionDigits: 0, maximumFractionDigits: 0 }),
-      roiMultiple: roiMultiple
+      quarterlyRecovery: quarterlyRecovery.toLocaleString(undefined, { minimumFractionDigits: 0, maximumFractionDigits: 0 }),
+      breakEvenMonths: Math.min(breakEvenMonths, 3), // Cap at 3 months for messaging
+      firstYearProfit: firstYearProfit.toLocaleString(undefined, { minimumFractionDigits: 0, maximumFractionDigits: 0 }),
+      quarterlyProfit: quarterlyProfit.toLocaleString(undefined, { minimumFractionDigits: 0, maximumFractionDigits: 0 })
     }
   }
 
@@ -218,26 +223,29 @@ export default function MarginCalculator() {
                 </div>
               </div>
 
-              {/* ROI Section */}
+                            {/* ROI Section */}
               <div className="p-6 bg-emerald-50 border-2 border-emerald-200 rounded-xl">
-                <h3 className="text-xl mb-4 text-emerald-800 text-center">The Irresistible Offer:</h3>
+                <h3 className="text-xl mb-4 text-emerald-800 text-center">Why Smart Practices Choose Us:</h3>
                 <div className="grid md:grid-cols-3 gap-4 text-center">
                   <div>
-                    <p className="text-sm text-emerald-600">Your Annual Loss</p>
-                    <div className="text-2xl font-bold text-emerald-700">${results.annualLoss}</div>
+                    <p className="text-sm text-emerald-600">Break Even</p>
+                    <div className="text-2xl font-bold text-emerald-700">Month {roi.breakEvenMonths}</div>
+                    <p className="text-xs text-emerald-600">Pays for itself fast</p>
                   </div>
-                                  <div>
-                  <p className="text-sm text-emerald-600">Our Solution Cost</p>
-                  <div className="text-2xl font-bold text-emerald-700">{roi.solutionCost}</div>
-                </div>
                   <div>
-                    <p className="text-sm text-emerald-600">You Recover</p>
-                    <div className="text-2xl font-bold text-emerald-700">${roi.recoveredRevenue}</div>
+                    <p className="text-sm text-emerald-600">Quarter 1 Recovery</p>
+                    <div className="text-2xl font-bold text-emerald-700">${roi.quarterlyRecovery}</div>
+                    <p className="text-xs text-emerald-600">Covers full investment</p>
+                  </div>
+                  <div>
+                    <p className="text-sm text-emerald-600">Year 1 Net Profit</p>
+                    <div className="text-2xl font-bold text-emerald-700">${roi.firstYearProfit}</div>
+                    <p className="text-xs text-emerald-600">Pure bottom-line gain</p>
                   </div>
                 </div>
                 <div className="mt-4 p-3 bg-emerald-100 rounded-lg text-center">
                   <p className="text-emerald-800">
-                    <strong>{roi.roiMultiple}X ROI:</strong> Invest {roi.solutionCost} to recover ${roi.recoveredRevenue} annually
+                    <strong>Guaranteed:</strong> Pays for itself in the first quarter, then ${roi.quarterlyProfit} pure profit every quarter after
                   </p>
                 </div>
               </div>
@@ -332,7 +340,7 @@ export default function MarginCalculator() {
             </h2>
             <p className="text-xl text-gray-600 mb-8">
               Join the 25% of practices that took action and improved their no-show rates. 
-              Invest {roi.solutionCost} to recover ${roi.recoveredRevenue} - a {roi.roiMultiple}X return.
+              Solution pays for itself by month {roi.breakEvenMonths}, then generates ${roi.quarterlyProfit} pure profit every quarter.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
