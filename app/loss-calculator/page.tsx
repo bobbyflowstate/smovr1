@@ -21,7 +21,7 @@ export default function LossCalculator() {
   // Cancellation rate options
   const cancellationRateOptions = [
     { value: 10, label: '10%' },
-    { value: 14, label: '14% (MGMA Average)' },
+    { value: 14, label: '14% (Industry Standard)' },
     { value: 15, label: '15%' },
     { value: 20, label: '20%' },
     { value: 30, label: '30%' },
@@ -166,7 +166,7 @@ export default function LossCalculator() {
                   </select>
                 </div>
                 <p className="mt-2 text-sm text-gray-600">
-                  <a href="#methodology" onClick={handleMethodologyClick} className="text-emerald-700 hover:text-emerald-800 hover:underline">See why we use 14% as MGMA average below ↓</a>
+                  <a href="#methodology" onClick={handleMethodologyClick} className="text-emerald-700 hover:text-emerald-800 hover:underline">See where we get industry standard below ↓</a>
                 </p>
               </div>
 
@@ -235,7 +235,7 @@ export default function LossCalculator() {
 
               {/* Industry Standard Comparison */}
               <div className="p-6 bg-amber-50 border-2 border-amber-200 rounded-xl">
-                <h3 className="text-xl mb-4 text-amber-800">MGMA industry benchmark (14% cancel rate):</h3>
+                <h3 className="text-xl mb-4 text-amber-800">Industry standard (14% cancel rate):</h3>
                 <div className="text-5xl font-bold text-amber-700">
                   ${calculateIndustryStandard()}
                 </div>
