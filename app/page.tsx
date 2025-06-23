@@ -81,7 +81,7 @@ export default function Home() {
                 />
               </div>
               <h1 className="text-5xl font-bold leading-tight mb-6 text-gray-900">
-              <br/>A $4M clinic <span className="text-red-500">quietly loses $200,000 a year</span> from canceled visits.
+              <br/>A $4M clinic <span className="text-red-500">may lose $200,000 a year</span> from canceled visits.
               </h1>
               <p className="text-xl text-gray-600 mb-8">
                 MGMA reports 5–7% no-shows — but what about the 14% who cancel and never return?<br/>
