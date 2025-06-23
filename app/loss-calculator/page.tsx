@@ -235,7 +235,7 @@ export default function LossCalculator() {
 
               {/* Industry Standard Comparison */}
               <div className="p-6 bg-amber-50 border-2 border-amber-200 rounded-xl">
-                <h3 className="text-xl mb-4 text-amber-800">MGMA industry benchmark (14% no-show rate):</h3>
+                <h3 className="text-xl mb-4 text-amber-800">MGMA industry benchmark (14% cancel rate):</h3>
                 <div className="text-5xl font-bold text-amber-700">
                   ${calculateIndustryStandard()}
                 </div>
