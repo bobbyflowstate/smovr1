@@ -68,6 +68,10 @@ export default function Terms() {
                     <span className="text-gray-600">Ongoing optimization and support</span>
                   </li>
                 </ul>
+                <h3 className="text-xl font-semibold text-gray-900 mb-3">2.1 Setup Process</h3>
+                <p className="text-gray-600 mb-4">
+                  Setup takes 2-3 weeks depending on A2P timing. We custom-fit your logic - no EHR disruption.
+                </p>
                 <p className="text-gray-600 mb-4">
                   We reserve the right to modify, upgrade, suspend, or discontinue aspects of the Services at any time.
                 </p>
