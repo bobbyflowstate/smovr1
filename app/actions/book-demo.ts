@@ -1,7 +1,7 @@
 'use server'
 
 if (!process.env.GHL_WEBHOOK) {
-  throw new Error('Looks like Joy is offline - our tech team needs to wake up the environment (var)')
+  throw new Error('Form momentarily offline. Please try again later.')
 }
 
 const WEBHOOK_URL = process.env.GHL_WEBHOOK

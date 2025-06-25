@@ -34,7 +34,7 @@ export default function Contact() {
                 </h2>
                 <p className="text-gray-600 mb-2">You can reach us directly at:</p>
                 <p className="text-2xl font-semibold text-emerald-700 mb-4">
-                  (855) SMOVR-01
+                  (917) 975-3793
                 </p>
                 <p className="text-gray-600">
                   We're available Monday through Friday, 9am - 5pm EST.
@@ -48,7 +48,7 @@ export default function Contact() {
                 </h2>
                 <p className="text-gray-600 mb-2">Send us a message anytime:</p>
                 <p className="text-2xl font-semibold text-emerald-700 mb-4">
-                  hello@smovr.com
+                  kevin@smovr.com
                 </p>
                 <p className="text-gray-600">
                   We respond to all inquiries within 1 business day.
