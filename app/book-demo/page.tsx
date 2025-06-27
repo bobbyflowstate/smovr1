@@ -6,12 +6,12 @@ import { submitBookingForm } from '@/app/actions/book-demo'
 
 export default function BookDemo() {
   const [formData, setFormData] = useState({
-    name: '',
+    first_name: '',
     email: '',
-    clinicName: ''
+    company: ''
   })
   const [emailError, setEmailError] = useState('')
-  const [nameError, setNameError] = useState('')
+  const [firstNameError, setFirstNameError] = useState('')
   const [submitStatus, setSubmitStatus] = useState<{
     loading: boolean;
     error?: string;
@@ -29,21 +29,21 @@ export default function BookDemo() {
     return ''
   }
 
-  const validateName = (name: string) => {
-    if (name.length < 2) {
+  const validateFirstName = (first_name: string) => {
+    if (first_name.length < 2) {
       return 'Name must be at least 2 characters long'
     }
-    if (name.length > 100) {
+    if (first_name.length > 100) {
       return 'Name must be less than 100 characters'
     }
     return ''
   }
 
-  const handleNameChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const newName = e.target.value
-    setFormData({ ...formData, name: newName })
-    setNameError(validateName(newName))
-  }
+  const handleFirstNameChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const newFirstName = e.target.value
+    setFormData({ ...formData, first_name: newFirstName })
+    setFirstNameError(validateFirstName(newFirstName))
+  })
 
   const handleEmailChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const newEmail = e.target.value
@@ -56,15 +56,15 @@ export default function BookDemo() {
     
     // Final validation before submit
     const emailValidationError = validateEmail(formData.email)
-    const nameValidationError = validateName(formData.name)
+    const firstNameValidationError = validateFirstName(formData.first_name)
 
     if (emailValidationError) {
       setEmailError(emailValidationError)
       return
     }
 
-    if (nameValidationError) {
-      setNameError(nameValidationError)
+    if (firstNameValidationError) {
+      setFirstNameError(firstNameValidationError)
       return
     }
 
@@ -78,7 +78,7 @@ export default function BookDemo() {
       }
 
       setSubmitStatus({ loading: false, success: true })
-      setFormData({ name: '', email: '', clinicName: '' }) // Reset form
+      setFormData({ first_name: '', email: '', company: '' }) // Reset form
     } catch (error) {
       console.error('Error submitting form:', error)
       setSubmitStatus({
@@ -110,21 +110,21 @@ export default function BookDemo() {
               <form onSubmit={handleSubmit} className="max-w-md mx-auto">
                 <div className="space-y-4">
                   <div>
-                    <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
-                      Name*
+                    <label htmlFor="first_name" className="block text-sm font-medium text-gray-700 mb-1">
+                      First Name*
                     </label>
                     <input
                       type="text"
-                      id="name"
-                      name="name"
-                      value={formData.name}
-                      onChange={handleNameChange}
-                      className={`w-full px-4 py-3 rounded-lg border ${nameError ? 'border-red-300 focus:ring-red-500 focus:border-red-500' : 'border-gray-300 focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500'}`}
+                      id="first_name"
+                      name="first_name"
+                      value={formData.first_name}
+                      onChange={handleFirstNameChange}
+                      className={`w-full px-4 py-3 rounded-lg border ${firstNameError ? 'border-red-300 focus:ring-red-500 focus:border-red-500' : 'border-gray-300 focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500'}`}
                       required
                     />
-                    {nameError && (
+                    {firstNameError && (
                       <p className="mt-1 text-sm text-red-600">
-                        {nameError}
+                        {firstNameError}
                       </p>
                     )}
                   </div>
@@ -148,22 +148,22 @@ export default function BookDemo() {
                     )}
                   </div>
                   <div>
-                    <label htmlFor="clinicName" className="block text-sm font-medium text-gray-700 mb-1">
-                      Clinic or Company Name
+                    <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-1">
+                      Company Name
                     </label>
                     <input
                       type="text"
-                      id="clinicName"
-                      name="clinicName"
-                      value={formData.clinicName}
-                      onChange={(e) => setFormData({ ...formData, clinicName: e.target.value })}
+                      id="company"
+                      name="company"
+                      value={formData.company}
+                      onChange={(e) => setFormData({ ...formData, company: e.target.value })}
                       className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500"
                     />
                   </div>
                   <button
                     type="submit"
                     className="w-full bg-emerald-700 text-white px-8 py-4 rounded-lg hover:bg-emerald-800 transition-colors duration-200 text-lg disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center"
-                    disabled={!!emailError || !formData.email || !formData.name || submitStatus.loading}
+                    disabled={!!emailError || !formData.email || !formData.first_name || submitStatus.loading}
                   >
                     {submitStatus.loading ? (
                       <>

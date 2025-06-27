@@ -7,9 +7,9 @@ if (!process.env.GHL_WEBHOOK) {
 const WEBHOOK_URL = process.env.GHL_WEBHOOK
 
 type FormData = {
-  name: string
+  first_name: string
   email: string
-  clinicName: string
+  company: string
 }
 
 export async function submitBookingForm(formData: FormData) {
@@ -20,7 +20,7 @@ export async function submitBookingForm(formData: FormData) {
     }
 
     // Validate name
-    if (!formData.name || formData.name.length < 2 || formData.name.length > 100) {
+    if (!formData.first_name || formData.first_name.length < 2 || formData.first_name.length > 100) {
       return { error: 'Name must be between 2 and 100 characters' }
     }
 
