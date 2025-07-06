@@ -138,36 +138,172 @@ export default function Home() {
       </section>
 
       {/* Leadflow Section */}
-      <section className="py-20 bg-emerald-50">
+      <section className="py-12 md:py-20 bg-[#f0faf5]">
         <div className="container mx-auto px-4">
-          <div className="max-w-5xl mx-auto">
-            <div className="text-center mb-12">
-              <h2 className="text-4xl md:text-5xl font-bold mb-4 text-gray-900">
-                Your Staff Can't Chase Every Cancellation
-              </h2>
-              <p className="text-xl text-gray-600">
-                Think of us like an ambulance outside the hospital. We don't enter the clinical system — we stabilize the chaos before it turns into lost revenue.
-              </p>
+          <div className="max-w-4xl mx-auto">
+            {/* Section Label */}
+            <div className="flex justify-center mb-6">
+              <div className="inline-flex items-center gap-2 px-4 py-2 bg-white rounded-full shadow-sm">
+                <div className="w-5 h-5 rounded-md flex items-center justify-center">
+                  💸
+                </div>
+                <span className="text-sm font-medium text-gray-900">The Results</span>
+              </div>
             </div>
-            <div className="relative rounded-2xl overflow-hidden shadow-2xl">
-              <Image
-                src="/images/flowchart2.png"
-                alt="SMOVR Lead Flow Process"
-                width={1200}
-                height={675}
-                className="w-full h-auto"
-                priority
-              />
+            {/* Header Content */}
+            <div className="mb-12 md:mb-20">
+              <div className="flex justify-center">
+                <h2 className="text-4xl md:text-5xl font-bold mb-8 md:mb-12 text-center max-w-3xl">
+                  Your front desk is firefighting, <span className="text-gray-600">SMOVR can help.</span>
+                </h2>
+              </div>
+              
+              <div className="text-xl md:text-2xl space-y-2 md:space-y-3 mb-8 md:mb-12 leading-snug md:leading-relaxed">
+                <p>Cancellations. No-shows. "I'll rebook later."</p>
+                <p>Patients running late or getting lost.</p>
+              </div>
+
+              <div className="text-xl md:text-2xl space-y-2 md:space-y-3 leading-snug md:leading-relaxed">
+                <p>Most systems react <span className="font-bold">after</span> the damage is done.</p>
+                <p>SMOVR catches the breakdowns <span className="font-bold italic">before</span> they spread — without needing access to your EHR.</p>
+              </div>
             </div>
-            <div className="flex justify-center pt-8">
-              <p className="text-xl text-gray-600 mt-4">
-                This is the "AFLAC of rescheduling" — a smart logic layer that protects your revenue the moment something breaks. No PHI. No AI chat. Just fast, compliant action where your EHR can't go.
-              </p>
+
+            {/* Before/After Comparison */}
+            <div className="grid md:grid-cols-2 gap-8 md:gap-16 mb-12 md:mb-16 relative">
+              {/* Connecting Line */}
+              <div className="hidden md:block absolute left-1/2 top-28 bottom-0 w-px bg-gradient-to-b from-emerald-200/50 to-emerald-100/20 -translate-x-1/2"></div>
+
+              {/* Before SMOVR */}
+              <div className="relative">
+                <div className="bg-gradient-to-br from-white to-red-50/30 rounded-2xl p-6 shadow-sm mb-8 md:mb-10">
+                  <div className="flex items-center gap-3">
+                    <span className="text-red-500/80 text-2xl">❌</span>
+                    <h3 className="text-3xl md:text-4xl font-bold bg-gradient-to-br from-gray-900 to-gray-700 bg-clip-text text-transparent">
+                      Before SMOVR
+                    </h3>
+                  </div>
+                </div>
+                <div className="space-y-3 md:space-y-4">
+                  {[
+                    '"I\'ll rebook later." → They vanish for months',
+                    '"I\'m running late" → Staff scrambles or loses the slot',
+                    'Patient gets lost → They miss the appointment',
+                    'Staff forgets to log a reschedule → Calendar is wrong',
+                    'System "confirms" → Patient still no-shows',
+                    '5 PM: no idea who canceled or rescheduled',
+                    'Staff re-enters everything manually',
+                    'Gaps = lost revenue → Cancellations kill the schedule',
+                    'Front desk = overwhelmed + reactive'
+                  ].map((text, index) => (
+                    <div 
+                      key={index}
+                      className="bg-white/40 backdrop-blur-sm rounded-xl p-4 shadow-sm transition-all duration-300 hover:shadow-md hover:bg-white/60 hover:-translate-y-0.5"
+                    >
+                      <p className="text-lg md:text-xl leading-snug md:leading-relaxed">
+                        {text.split('→').map((part, i) => (
+                          <span key={i} className={i === 0 ? 'text-gray-900' : 'text-red-700/90 ml-2'}>
+                            {i === 1 && <span className="mx-2 opacity-50">→</span>}
+                            {part}
+                          </span>
+                        ))}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* After SMOVR */}
+              <div className="relative">
+                <div className="bg-gradient-to-br from-white to-emerald-50/30 rounded-2xl p-6 shadow-sm mb-8 md:mb-10">
+                  <div className="flex items-center gap-3">
+                    <span className="text-emerald-500/80 text-2xl">✨</span>
+                    <h3 className="text-3xl md:text-4xl font-bold bg-gradient-to-br from-emerald-800 to-emerald-600 bg-clip-text text-transparent">
+                      After SMOVR
+                    </h3>
+                  </div>
+                </div>
+                <div className="space-y-3 md:space-y-4">
+                  {[
+                    {
+                      text: '"No problem — we\'ll remind you in 2 months." → They rebook automatically',
+                      highlight: 'rebook automatically'
+                    },
+                    {
+                      text: 'SMOVR routes them: reschedule, map, or call — no chaos',
+                      highlight: 'reschedule, map, or call'
+                    },
+                    {
+                      text: 'Custom directions link sent instantly — they show up',
+                      highlight: 'Custom directions link'
+                    },
+                    {
+                      text: 'SMOVR logs it immediately — no errors, no stress',
+                      highlight: 'no errors, no stress'
+                    },
+                    {
+                      text: 'SMOVR checks intent — confirms, reroutes, or recovers',
+                      highlight: 'checks intent'
+                    },
+                    {
+                      text: 'SMOVR sends a daily digest — full visibility',
+                      highlight: 'daily digest'
+                    },
+                    {
+                      text: 'One-time import into the EHR — clean and consolidated',
+                      highlight: 'One-time import'
+                    },
+                    {
+                      text: 'SMOVR reroutes cancellation into reschedule or call — in real-time',
+                      highlight: 'reroutes cancellation into reschedule or call'
+                    },
+                    {
+                      text: 'SMOVR runs outside the EHR — handles issues before they hit the front desk',
+                      highlight: ['outside the EHR', 'before']
+                    }
+                  ].map((item, index) => (
+                    <div 
+                      key={index}
+                      className="bg-white/40 backdrop-blur-sm rounded-xl p-4 shadow-sm transition-all duration-300 hover:shadow-md hover:bg-white/60 hover:-translate-y-0.5"
+                    >
+                      <p className="text-lg md:text-xl leading-snug md:leading-relaxed">
+                        {item.text.split(/( — |→)/).map((part: string, i: number) => {
+                          if (part === ' — ' || part === '→') {
+                            return <span key={i} className="mx-2 opacity-50">{part}</span>;
+                          }
+                          
+                          const highlights = Array.isArray(item.highlight) ? item.highlight : [item.highlight];
+                          let textPart: React.ReactNode = part;
+                          
+                          highlights.forEach(highlight => {
+                            if (typeof textPart === 'string') {
+                              const parts = textPart.split(highlight);
+                              if (parts.length > 1) {
+                                textPart = parts.reduce((acc: React.ReactNode, curr: string, idx: number) => {
+                                  if (idx === 0) return curr;
+                                  return <>{acc}<span className="font-bold">{highlight}</span>{curr}</>;
+                                }, '');
+                              }
+                            }
+                          });
+
+                          return (
+                            <span key={i} className={i === 0 ? 'text-gray-900' : 'text-emerald-700/90'}>
+                              {textPart}
+                            </span>
+                          );
+                        })}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+              </div>
             </div>
-            <div className="mt-12 text-center">
+
+            <div className="text-center">
               <Link
                 href="/loss-calculator"
-                className="inline-flex items-center bg-red-500 text-white px-8 py-4 rounded-lg hover:bg-red-600 transition-colors duration-200 text-lg md:text-2xl shadow-lg"
+                className="inline-flex items-center bg-red-500 text-white px-6 md:px-8 py-3 md:py-4 rounded-lg hover:bg-red-600 transition-colors duration-200 text-lg md:text-xl shadow-lg"
               >
                 Calculate Your Loss 💸
               </Link>
@@ -312,11 +448,11 @@ export default function Home() {
               <div className="relative z-10">
                 <div className="prose prose-lg max-w-none">
                   <p className="text-xl text-gray-700 mb-8 leading-relaxed">
-                    Almost all EHRs — from Epic down to Practice Fusion — were built to document care, not to adapt in real time. They track no-shows. They log cancellations. But they don’t bring patients back. They don’t rescue soft cancels. They don’t protect revenue.
+                    Almost all EHRs — from Epic down to Practice Fusion — were built to document care, not to adapt in real time. They track no-shows. They log cancellations. But they don't bring patients back. They don't rescue soft cancels. They don't protect revenue.
                   </p>
                   
                   <p className="text-xl text-gray-700 mb-12 leading-relaxed">
-                    That’s where SMOVR steps in. It runs quietly outside your EHR — catching missed opportunities, rescheduling automatically, and recovering lost visits without PHI access or workflow disruption.
+                    That's where SMOVR steps in. It runs quietly outside your EHR — catching missed opportunities, rescheduling automatically, and recovering lost visits without PHI access or workflow disruption.
                   </p>
 
                   <div className="flex items-center justify-center">
