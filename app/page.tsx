@@ -312,16 +312,17 @@ export default function Home() {
               <div className="relative z-10">
                 <div className="prose prose-lg max-w-none">
                   <p className="text-xl text-gray-700 mb-8 leading-relaxed">
-                    Most EHR systems — Epic, Athena, Health Gorilla — were built to protect data, not adapt in real time. They don't reschedule. They don't reallocate. They don't fill gaps.
+                    Almost all EHRs — from Epic down to Practice Fusion — were built to document care, not to adapt in real time. They track no-shows. They log cancellations. But they don’t bring patients back. They don’t rescue soft cancels. They don’t protect revenue.
                   </p>
                   
                   <p className="text-xl text-gray-700 mb-12 leading-relaxed">
-                    That's where our platform comes in. It runs quietly outside your EHR — detecting breakdowns, filling empty appointments, and recovering lost revenue without PHI access or workflow disruption.
+                    That’s where SMOVR steps in. It runs quietly outside your EHR — catching missed opportunities, rescheduling automatically, and recovering lost visits without PHI access or workflow disruption.
                   </p>
 
-                  <div className="flex items-center justify-center gap-3 text-xl text-emerald-700">
-                    <span>Want exact technical details? See our most common questions below</span>
-                    <span className="text-2xl">👇</span>
+                  <div className="flex items-center justify-center">
+                    <Link href="#faq" className="text-xl text-emerald-700 hover:underline">
+                      Ready to stop the leaks? See how SMOVR works →
+                    </Link>
                   </div>
                 </div>
               </div>
