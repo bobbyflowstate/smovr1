@@ -533,7 +533,7 @@ export default function Home() {
             {/* Bottom CTA */}
             <div className="mt-16 text-center">
               <p className="text-gray-600 mb-6">Still have questions?</p>
-              <p className="text-gray-600">Complete the secure form below and we'll follow up confidentially.</p>
+              <p className="text-gray-600">Complete this <a href="/book-demo" target="_blank" rel="noopener noreferrer" className="text-emerald-700 hover:underline">secure form</a> and we'll follow up confidentially.</p>
             </div>
           </div>
         </div>
