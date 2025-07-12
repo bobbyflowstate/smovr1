@@ -494,7 +494,7 @@ export default function Home() {
                 },
                 {
                   q: "Will our staff need to change how they work?",
-                  a: "Not at all. Once configured, the system runs in the background — auto-reallocating openings and reducing no-shows. No new portals. No new steps."
+                  a: "Not really. SMOVR becomes your live schedule, so patients can confirm or reschedule in real time without tying up your staff. During the day your team can keep working as they do now, and any updates to the EHR can be done later at their convenience. Just a simpler way to keep the day running smoothly."
                 },
                 {
                   q: "How is this deployed across multiple locations or specialties?",
