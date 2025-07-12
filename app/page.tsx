@@ -430,14 +430,14 @@ export default function Home() {
             <div className="flex justify-center mb-6">
               <div className="inline-flex items-center gap-2 px-4 py-2 bg-white rounded-full shadow-sm">
                 <div className="w-5 h-5 bg-[#E8FAE5] rounded-md flex items-center justify-center">
-                  <span className="text-emerald-700">💡</span>
+                  <span className="text-emerald-700">👮‍♂️</span>
                 </div>
                 <span className="text-sm font-medium text-gray-900">How It Works</span>
               </div>
             </div>
 
             <h2 className="text-4xl md:text-5xl font-bold text-center mb-12 text-gray-900">
-              The Logic Layer That Solves<br/>the Real Problem
+              Your EHR isn't broken.<br/>It's a security guard.
             </h2>
 
             <div className="bg-white rounded-3xl p-12 shadow-sm relative overflow-hidden">
@@ -447,18 +447,38 @@ export default function Home() {
 
               <div className="relative z-10">
                 <div className="prose prose-lg max-w-none">
+                  <h3 className="text-2xl text-gray-900 mb-6">
+                  ⛑️ Protecting privacy. Not patient flow.
+                  </h3>
+
                   <p className="text-xl text-gray-700 mb-8 leading-relaxed">
-                    Almost all EHRs — from Epic down to Practice Fusion — were built to document care, not to adapt in real time. They track no-shows. They log cancellations. But they don't bring patients back. They don't rescue soft cancels. They don't protect revenue.
+                    Almost all EHRs — from Epic down to Practice Fusion — were built to protect records, not keep patients efficiently cared for.
                   </p>
                   
-                  <p className="text-xl text-gray-700 mb-12 leading-relaxed">
-                    That's where SMOVR steps in. It runs quietly outside your EHR — catching missed opportunities, rescheduling automatically, and recovering lost visits without PHI access or workflow disruption.
+                  <p className="text-xl text-gray-700 mb-8 leading-relaxed">
+                    Trying to manage real-time patient flow with them? It's like trying to pour milk from a water faucet. They weren't designed for it.
                   </p>
 
-                  <div className="flex items-center justify-center">
-                    <Link href="#faq" className="text-xl text-emerald-700 hover:underline">
-                      Ready to stop the leaks? See how SMOVR works →
-                    </Link>
+                  <h3 className="text-2xl text-gray-900 mb-6">
+                    🛎️ SMOVR steps in like a concierge.
+                  </h3>
+
+                  <p className="text-xl text-gray-700 mb-8 leading-relaxed">
+                    We quietly recover canceled visits, route late arrivals, and fill empty slots in real time.
+                  </p>
+
+                  <div className="mt-12 pt-8 border-t border-gray-100">
+                    <h4 className="text-xl font-semibold mb-4">The result:</h4>
+                    <ul className="space-y-4">
+                      <li className="flex items-center gap-2">
+                        <span className="text-emerald-600">✓</span>
+                        <span className="text-xl">Revenue + efficiency — the business bottom line</span>
+                      </li>
+                      <li className="flex items-center gap-2">
+                        <span className="text-emerald-600">✓</span>
+                        <span className="text-xl">Patient trust + staff sanity — the heart and reputation of your clinic</span>
+                      </li>
+                    </ul>
                   </div>
                 </div>
               </div>
