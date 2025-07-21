@@ -170,13 +170,10 @@ export default function Home() {
             </div>
 
             {/* Before/After Comparison */}
-            <div className="grid md:grid-cols-2 gap-8 md:gap-16 mb-12 md:mb-16 relative">
-              {/* Connecting Line */}
-              <div className="hidden md:block absolute left-1/2 top-28 bottom-0 w-px bg-gradient-to-b from-emerald-200/50 to-emerald-100/20 -translate-x-1/2"></div>
-
-              {/* Before SMOVR */}
-              <div className="relative">
-                <div className="bg-gradient-to-br from-white to-red-50/30 rounded-2xl p-6 shadow-sm mb-8 md:mb-10">
+            <div className="mb-12 md:mb-16 relative">
+              {/* Headers */}
+              <div className="grid md:grid-cols-2 gap-8 md:gap-16 mb-8">
+                <div className="bg-gradient-to-br from-white to-red-50/30 rounded-2xl p-6 shadow-sm">
                   <div className="flex items-center gap-3">
                     <span className="text-red-500/80 text-2xl">❌</span>
                     <h3 className="text-3xl md:text-4xl font-bold bg-gradient-to-br from-gray-900 to-gray-700 bg-clip-text text-transparent">
@@ -184,38 +181,8 @@ export default function Home() {
                     </h3>
                   </div>
                 </div>
-                <div className="space-y-3 md:space-y-4">
-                  {[
-                    '"I\'ll rebook later." → They vanish for months',
-                    '"I\'m running late" → Staff scrambles or loses the slot',
-                    'Patient gets lost → They miss the appointment',
-                    'Staff forgets to log a reschedule → Calendar is wrong',
-                    'System "confirms" → Patient still no-shows',
-                    '5 PM: no idea who canceled or rescheduled',
-                    'Staff re-enters everything manually',
-                    'Gaps = lost revenue → Cancellations kill the schedule',
-                    'Front desk = overwhelmed + reactive'
-                  ].map((text, index) => (
-                    <div 
-                      key={index}
-                      className="bg-white/40 backdrop-blur-sm rounded-xl p-4 shadow-sm transition-all duration-300 hover:shadow-md hover:bg-white/60 hover:-translate-y-0.5"
-                    >
-                      <p className="text-lg md:text-xl leading-snug md:leading-relaxed">
-                        {text.split('→').map((part, i) => (
-                          <span key={i} className={i === 0 ? 'text-gray-900' : 'text-red-700/90 ml-2'}>
-                            {i === 1 && <span className="mx-2 opacity-50">→</span>}
-                            {part}
-                          </span>
-                        ))}
-                      </p>
-                    </div>
-                  ))}
-                </div>
-              </div>
 
-              {/* After SMOVR */}
-              <div className="relative">
-                <div className="bg-gradient-to-br from-white to-emerald-50/30 rounded-2xl p-6 shadow-sm mb-8 md:mb-10">
+                <div className="bg-gradient-to-br from-white to-emerald-50/30 rounded-2xl p-6 shadow-sm">
                   <div className="flex items-center gap-3">
                     <span className="text-emerald-500/80 text-2xl">✨</span>
                     <h3 className="text-3xl md:text-4xl font-bold bg-gradient-to-br from-emerald-800 to-emerald-600 bg-clip-text text-transparent">
@@ -223,81 +190,125 @@ export default function Home() {
                     </h3>
                   </div>
                 </div>
-                <div className="space-y-3 md:space-y-4">
+              </div>
+
+              {/* Table of Comparisons */}
+              <table className="w-full border-separate border-spacing-4 md:border-spacing-8">
+                <tbody>
                   {[
                     {
-                      text: '"No problem — we\'ll remind you in 2 months." → They rebook automatically',
-                      highlight: 'rebook automatically'
+                      before: '"I\'ll rebook later." → They vanish for months',
+                      after: {
+                        text: '"No problem — we\'ll remind you in 2 months." → They rebook automatically',
+                        highlight: 'rebook automatically'
+                      }
                     },
                     {
-                      text: 'SMOVR routes them: reschedule, map, or call — no chaos',
-                      highlight: 'reschedule, map, or call'
+                      before: '"I\'m running late" → Staff scrambles or loses the slot',
+                      after: {
+                        text: 'SMOVR routes them: reschedule, map, or call — no chaos',
+                        highlight: 'reschedule, map, or call'
+                      }
                     },
                     {
-                      text: 'Custom directions link sent instantly — they show up',
-                      highlight: 'Custom directions link'
+                      before: 'Patient gets lost → They miss the appointment',
+                      after: {
+                        text: 'Custom directions link sent instantly — they show up',
+                        highlight: 'Custom directions link'
+                      }
                     },
                     {
-                      text: 'SMOVR logs it immediately — no errors, no stress',
-                      highlight: 'no errors, no stress'
+                      before: 'Staff forgets to log a reschedule → Calendar is wrong',
+                      after: {
+                        text: 'SMOVR logs it immediately — no errors, no stress',
+                        highlight: 'no errors, no stress'
+                      }
                     },
                     {
-                      text: 'SMOVR checks intent — confirms, reroutes, or recovers',
-                      highlight: 'checks intent'
+                      before: 'System "confirms" → Patient still no-shows',
+                      after: {
+                        text: 'SMOVR checks intent — confirms, reroutes, or recovers',
+                        highlight: 'checks intent'
+                      }
                     },
                     {
-                      text: 'SMOVR sends a daily digest — full visibility',
-                      highlight: 'daily digest'
+                      before: '5 PM: no idea who canceled or rescheduled',
+                      after: {
+                        text: 'SMOVR sends a daily digest — full visibility',
+                        highlight: 'daily digest'
+                      }
                     },
                     {
-                      text: 'One-time import into the EHR — clean and consolidated',
-                      highlight: 'One-time import'
+                      before: 'Staff re-enters everything manually',
+                      after: {
+                        text: 'One-time import into the EHR — clean and consolidated',
+                        highlight: 'One-time import'
+                      }
                     },
                     {
-                      text: 'SMOVR reroutes cancellation into reschedule or call — in real-time',
-                      highlight: 'reroutes cancellation into reschedule or call'
+                      before: 'Gaps = lost revenue → Cancellations kill the schedule',
+                      after: {
+                        text: 'SMOVR reroutes cancellation into reschedule or call — in real-time',
+                        highlight: 'reroutes cancellation into reschedule or call'
+                      }
                     },
                     {
-                      text: 'SMOVR runs outside the EHR — handles issues before they hit the front desk',
-                      highlight: ['outside the EHR', 'before']
+                      before: 'Front desk = overwhelmed + reactive',
+                      after: {
+                        text: 'SMOVR runs outside the EHR — handles issues before they hit the front desk',
+                        highlight: ['outside the EHR', 'before']
+                      }
                     }
-                  ].map((item, index) => (
-                    <div 
-                      key={index}
-                      className="bg-white/40 backdrop-blur-sm rounded-xl p-4 shadow-sm transition-all duration-300 hover:shadow-md hover:bg-white/60 hover:-translate-y-0.5"
-                    >
-                      <p className="text-lg md:text-xl leading-snug md:leading-relaxed">
-                        {item.text.split(/( — |→)/).map((part: string, i: number) => {
-                          if (part === ' — ' || part === '→') {
-                            return <span key={i} className="mx-2 opacity-50">{part}</span>;
-                          }
-                          
-                          const highlights = Array.isArray(item.highlight) ? item.highlight : [item.highlight];
-                          let textPart: React.ReactNode = part;
-                          
-                          highlights.forEach(highlight => {
-                            if (typeof textPart === 'string') {
-                              const parts = textPart.split(highlight);
-                              if (parts.length > 1) {
-                                textPart = parts.reduce((acc: React.ReactNode, curr: string, idx: number) => {
-                                  if (idx === 0) return curr;
-                                  return <>{acc}<span className="font-bold">{highlight}</span>{curr}</>;
-                                }, '');
+                  ].map((pair, index) => (
+                    <tr key={index}>
+                      <td className="w-1/2">
+                        <div className="bg-white/40 backdrop-blur-sm rounded-xl p-4 shadow-sm transition-all duration-300 hover:shadow-md hover:bg-white/60 hover:-translate-y-0.5">
+                          <p className="text-lg md:text-xl leading-snug md:leading-relaxed">
+                            {pair.before.split('→').map((part, i) => (
+                              <span key={i} className={i === 0 ? 'text-gray-900' : 'text-red-700/90 ml-2'}>
+                                {i === 1 && <span className="mx-2 opacity-50">→</span>}
+                                {part}
+                              </span>
+                            ))}
+                          </p>
+                        </div>
+                      </td>
+                      <td className="w-1/2">
+                        <div className="bg-white/40 backdrop-blur-sm rounded-xl p-4 shadow-sm transition-all duration-300 hover:shadow-md hover:bg-white/60 hover:-translate-y-0.5">
+                          <p className="text-lg md:text-xl leading-snug md:leading-relaxed">
+                            {pair.after.text.split(/( — |→)/).map((part: string, i: number) => {
+                              if (part === ' — ' || part === '→') {
+                                return <span key={i} className="mx-2 opacity-50">{part}</span>;
                               }
-                            }
-                          });
+                              
+                              const highlights = Array.isArray(pair.after.highlight) ? pair.after.highlight : [pair.after.highlight];
+                              let textPart: React.ReactNode = part;
+                              
+                              highlights.forEach(highlight => {
+                                if (typeof textPart === 'string') {
+                                  const parts = textPart.split(highlight);
+                                  if (parts.length > 1) {
+                                    textPart = parts.reduce((acc: React.ReactNode, curr: string, idx: number) => {
+                                      if (idx === 0) return curr;
+                                      return <>{acc}<span className="font-bold">{highlight}</span>{curr}</>;
+                                    }, '');
+                                  }
+                                }
+                              });
 
-                          return (
-                            <span key={i} className={i === 0 ? 'text-gray-900' : 'text-emerald-700/90'}>
-                              {textPart}
-                            </span>
-                          );
-                        })}
-                      </p>
-                    </div>
+                              return (
+                                <span key={i} className={i === 0 ? 'text-gray-900' : 'text-emerald-700/90'}>
+                                  {textPart}
+                                </span>
+                              );
+                            })}
+                          </p>
+                        </div>
+                      </td>
+                    </tr>
                   ))}
-                </div>
-              </div>
+                </tbody>
+              </table>
             </div>
 
             <div className="text-center">
