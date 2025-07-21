@@ -241,8 +241,8 @@ export default function Home() {
                     {
                       before: 'Staff re-enters everything manually',
                       after: {
-                        text: 'One-time import into the EHR — clean and consolidated',
-                        highlight: 'One-time import'
+                        text: 'SMOVR delivers a clean, end-of-day log for fast entry—no hunting for updates',
+                        highlight: 'end-of-day log'
                       }
                     },
                     {
@@ -530,10 +530,6 @@ export default function Home() {
                 {
                   q: "How is this deployed across multiple locations or specialties?",
                   a: "It's modular and scalable — from solo practices to national groups. Multi-location support and optional waitlist logic are built-in."
-                },
-                {
-                  q: "What about SMS compliance?",
-                  a: "Already using reminders? You're likely pre-approved. If not, we guide your team through A2P registration during onboarding to ensure compliant delivery from day one."
                 },
                 {
                   q: "How is pricing handled?",
