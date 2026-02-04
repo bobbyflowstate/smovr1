@@ -6,6 +6,7 @@ import { useEffect, useRef } from "react"
 import { Playfair_Display, Inter } from 'next/font/google'
 import Image from 'next/image'
 import Header from "@/app/components/Header"
+import HomeA2P from "@/app/components/HomeA2P"
 
 const playfair = Playfair_Display({ 
   subsets: ['latin'],
@@ -20,9 +21,15 @@ const inter = Inter({
 })
 
 export default function Home() {
+  // Check env var for A2P mode
+  const showA2P = process.env.NEXT_PUBLIC_HOME_PAGE_A2P === 'true'
+  
+  // All hooks must be called unconditionally before any early returns
   const observerRef = useRef<IntersectionObserver | null>(null);
 
   useEffect(() => {
+    if (showA2P) return; // Skip effect when showing A2P page
+    
     observerRef.current = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -39,9 +46,11 @@ export default function Home() {
     });
 
     return () => observerRef.current?.disconnect();
-  }, []);
+  }, [showA2P]);
 
   useEffect(() => {
+    if (showA2P) return; // Skip effect when showing A2P page
+    
     const loadTally = () => {
       const existingScript = document.querySelector('script[src="https://tally.so/widgets/embed.js"]');
       if (!existingScript) {
@@ -60,7 +69,12 @@ export default function Home() {
     };
 
     loadTally();
-  }, []);
+  }, [showA2P]);
+
+  // Return A2P page after all hooks have been called
+  if (showA2P) {
+    return <HomeA2P />
+  }
 
   return (
     <div className="min-h-screen bg-white">

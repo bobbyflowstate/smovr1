@@ -18,11 +18,14 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
+  // Hide default footer when A2P page is active (it has its own footer)
+  const showA2P = process.env.NEXT_PUBLIC_HOME_PAGE_A2P === 'true'
+
   return (
     <html lang="en">
       <body className={inter.className}>
         <main>{children}</main>
-        <Footer />
+        {!showA2P && <Footer />}
       </body>
     </html>
   );
