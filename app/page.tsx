@@ -407,6 +407,59 @@ export default function Home() {
       </section>
 
 
+      {/* Backstory Section */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            {/* Section Label */}
+            <div className="flex justify-center mb-6">
+              <div className="inline-flex items-center gap-2 px-4 py-2 bg-emerald-50 rounded-full shadow-sm">
+                <div className="w-5 h-5 bg-[#E8FAE5] rounded-md flex items-center justify-center">
+                  <span className="text-emerald-700">✨</span>
+                </div>
+                <span className="text-sm font-medium text-gray-900">Our Story</span>
+              </div>
+            </div>
+
+            <h2 className="text-4xl md:text-6xl font-bold text-center mb-12 text-gray-900">
+              Your Human Partner in Navigating The Future
+            </h2>
+
+            <div className="bg-gradient-to-br from-emerald-50 to-white rounded-3xl p-12 shadow-sm relative overflow-hidden">
+              {/* Decorative Elements */}
+              <div className="absolute top-0 right-0 w-64 h-64 bg-emerald-100 rounded-full opacity-20 transform translate-x-1/2 -translate-y-1/2"></div>
+              <div className="absolute bottom-0 left-0 w-48 h-48 bg-emerald-200 rounded-full opacity-20 transform -translate-x-1/2 translate-y-1/2"></div>
+
+              <div className="relative z-10">
+                <div className="flex flex-col md:flex-row md:items-start gap-6 mb-8">
+                  <div className="flex-shrink-0 mx-auto md:mx-0">
+                    <Image
+                      src="/images/kevin-profile.jpg"
+                      alt="Kevin Stratmann - Founder"
+                      width={120}
+                      height={120}
+                      className="rounded-full"
+                    />
+                  </div>
+                  <div className="text-center md:text-left">
+                    <p className="text-xl text-gray-700 mb-8 leading-relaxed">
+                      Kevin Stratmann is a creative systems thinker and author of Shift Success with AI. He partnered with <a href="https://about.me/ashokraju" target="_blank" rel="noopener noreferrer" className="text-emerald-700 hover:underline">Ashok, a former software founder with several startup exits (Google, Dropbox)</a>, to build what major EHRs missed:
+                    </p>
+                  </div>
+                </div>
+
+                <div className="bg-emerald-50 rounded-xl p-6 mb-8">
+                  <p className="text-xl text-emerald-700 font-medium">
+                    ➡️ A lightweight, outside-the-firewall automation layer that protects revenue without disrupting clinical systems.
+                  </p>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Why We Built It Section */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
@@ -425,12 +478,11 @@ export default function Home() {
               <div className="absolute bottom-0 left-0 w-44 h-44 bg-emerald-100 rounded-full opacity-30 transform -translate-x-1/3 translate-y-1/3"></div>
 
               <div className="relative z-10">
-                <p className="text-2xl text-emerald-600 leading-none mb-3">"</p>
                 <p className="max-w-4xl text-xl md:text-2xl text-gray-800 leading-relaxed">
                   "A missed update and a long wait in a crowded office made something clear to me: the problem wasn't effort, it was outdated communication logic. If a clinic cannot quickly inform patients of changes, everyone pays the price. It was built to bring real-time visibility to scheduling and reduce unnecessary friction for both staff and patients."
                 </p>
                 <p className="mt-6 text-sm uppercase tracking-[0.14em] text-gray-500">
-                  Founder
+                  Kevin Stratmann
                 </p>
               </div>
             </div>
