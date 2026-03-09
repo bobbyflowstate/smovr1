@@ -183,6 +183,22 @@ export default function Home() {
               </div>
             </div>
 
+            {/* Testimonial */}
+            <div className="mb-12 md:mb-16">
+              <div className="bg-white rounded-2xl border border-emerald-100 p-8 md:p-10 shadow-sm">
+                <p className="text-sm uppercase tracking-[0.16em] text-emerald-700 font-semibold mb-4">
+                  Testimonial
+                </p>
+                <blockquote className="text-xl md:text-2xl leading-relaxed text-gray-800">
+                  "The system gives our team real-time visibility into patient communication and helps us stay ahead of missed appointments. It's simple, effective, and easy for our staff to use."
+                </blockquote>
+                <div className="mt-6 pt-6 border-t border-gray-100">
+                  <p className="font-semibold text-gray-900">Arizona Integrated Medical</p>
+                  <p className="text-gray-600">Arizona</p>
+                </div>
+              </div>
+            </div>
+
             {/* Before/After Comparison */}
             <div className="mb-12 md:mb-16 relative">
               {/* Headers */}
@@ -391,55 +407,30 @@ export default function Home() {
       </section>
 
 
-      {/* Backstory Section */}
+      {/* Why We Built It Section */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            {/* Section Label */}
-            <div className="flex justify-center mb-6">
-              <div className="inline-flex items-center gap-2 px-4 py-2 bg-emerald-50 rounded-full shadow-sm">
-                <div className="w-5 h-5 bg-[#E8FAE5] rounded-md flex items-center justify-center">
-                  <span className="text-emerald-700">✨</span>
-                </div>
-                <span className="text-sm font-medium text-gray-900">Our Story</span>
-              </div>
+          <div className="max-w-5xl mx-auto">
+            <div className="text-center mb-8">
+              <p className="text-sm font-semibold tracking-[0.14em] uppercase text-emerald-700 mb-3">
+                Founder Story
+              </p>
+              <h2 className="text-3xl md:text-5xl font-bold text-gray-900">
+                Why We Built It
+              </h2>
             </div>
 
-            <h2 className="text-4xl md:text-6xl font-bold text-center mb-12 text-gray-900">
-              Your Human Partner in Navigating The Future
-            </h2>
-
-            <div className="bg-gradient-to-br from-emerald-50 to-white rounded-3xl p-12 shadow-sm relative overflow-hidden">
-              {/* Decorative Elements */}
-              <div className="absolute top-0 right-0 w-64 h-64 bg-emerald-100 rounded-full opacity-20 transform translate-x-1/2 -translate-y-1/2"></div>
-              <div className="absolute bottom-0 left-0 w-48 h-48 bg-emerald-200 rounded-full opacity-20 transform -translate-x-1/2 translate-y-1/2"></div>
+            <div className="rounded-3xl border border-emerald-100 bg-gradient-to-br from-emerald-50/80 via-white to-emerald-50/40 p-8 md:p-12 shadow-sm relative overflow-hidden">
+              <div className="absolute top-0 right-0 w-56 h-56 bg-emerald-100 rounded-full opacity-30 transform translate-x-1/3 -translate-y-1/3"></div>
+              <div className="absolute bottom-0 left-0 w-44 h-44 bg-emerald-100 rounded-full opacity-30 transform -translate-x-1/3 translate-y-1/3"></div>
 
               <div className="relative z-10">
-                <div className="flex flex-col md:flex-row md:items-start gap-6 mb-8">
-                  <div className="flex-shrink-0 mx-auto md:mx-0">
-                    <Image
-                      src="/images/kevin-profile.jpg"
-                      alt="Kevin Stratmann - Founder"
-                      width={120}
-                      height={120}
-                      className="rounded-full"
-                    />
-                  </div>
-                  <div className="text-center md:text-left">
-                    <p className="text-xl text-gray-700 mb-8 leading-relaxed">
-                      Kevin Stratmann is a creative systems thinker and author of Shift Success with AI. He partnered with <a href="https://about.me/ashokraju" target="_blank" rel="noopener noreferrer" className="text-emerald-700 hover:underline">Ashok, a former software founder with several startup exits (Google, Dropbox)</a>, to build what major EHRs missed:
-                    </p>
-                  </div>
-                </div>
-
-                <div className="bg-emerald-50 rounded-xl p-6 mb-8">
-                  <p className="text-xl text-emerald-700 font-medium">
-                    ➡️ A lightweight, outside-the-firewall automation layer that protects revenue without disrupting clinical systems.
-                  </p>
-                </div>
-
-                <p className="text-xl text-gray-700 italic">
-                  "They're not selling hype. They're solving real scheduling breakdowns — with tools that work where legacy systems can't."
+                <p className="text-2xl text-emerald-600 leading-none mb-3">"</p>
+                <p className="max-w-4xl text-xl md:text-2xl text-gray-800 leading-relaxed">
+                  "A missed update and a long wait in a crowded office made something clear to me: the problem wasn't effort, it was outdated communication logic. If a clinic cannot quickly inform patients of changes, everyone pays the price. It was built to bring real-time visibility to scheduling and reduce unnecessary friction for both staff and patients."
+                </p>
+                <p className="mt-6 text-sm uppercase tracking-[0.14em] text-gray-500">
+                  Founder
                 </p>
               </div>
             </div>
