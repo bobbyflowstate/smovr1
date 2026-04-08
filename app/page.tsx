@@ -81,7 +81,7 @@ export default function Home() {
       <Header showBackToHome={false} />
 
       {/* Hero Section */}
-      <section className="pt-32 pb-20">
+      <section className="pt-32 pb-14">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
@@ -94,13 +94,21 @@ export default function Home() {
                   className="rounded-2xl shadow-lg"
                 />
               </div>
-              <h1 className="text-5xl font-bold leading-tight mb-6 text-gray-900">
-              <br/>We run all two-way <span className="text-red-500">clinic texting in real time</span>, automatically handling messages, logic, and workflows.
+              <h1 className="max-w-2xl text-5xl font-bold leading-tight mb-6 text-gray-900">
+                Stop the daily firefighting caused by missed patient actions
               </h1>
-              <p className="text-xl text-gray-600 mb-8">
-                MGMA reports 5–7% no-shows — but what about the 14% who cancel and never return?<br/>
-                <span className="text-red-500">The numbers don't lie.</span> Most staff never see it. Optimistic reporting buries it. <Link href="/loss-calculator" className="text-emerald-700 hover:text-emerald-800 hover:underline">Our calculator exposes it</Link>.
-              </p>
+              <div className="max-w-2xl mb-8">
+                <p className="text-2xl md:text-3xl text-gray-800 leading-snug mb-3">
+                  A real time patient follow up communication interface
+                </p>
+                <p className="text-lg md:text-xl text-gray-600 leading-relaxed mb-5">
+                  We manage patient communication so nothing falls through the cracks.
+                </p>
+                <div className="border-l-4 border-red-500 pl-4">
+                  <p className="text-xl font-semibold text-gray-900">A patient cancels. Then what?</p>
+                  <p className="text-lg text-gray-600 mt-1">Most systems stop there.</p>
+                </div>
+              </div>
               <div className="flex flex-wrap gap-4">
                 <Link
                   href="/loss-calculator"
@@ -155,6 +163,9 @@ export default function Home() {
       <section className="py-12 md:py-20 bg-[#f0faf5]">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
+            <p className="text-center text-lg md:text-xl text-gray-700 mb-8 md:mb-10">
+              This communication interface, called SMOVR, manages patient communication automatically.
+            </p>
             {/* Section Label */}
             <div className="flex justify-center mb-6">
               <div className="inline-flex items-center gap-2 px-4 py-2 bg-white rounded-full shadow-sm">
@@ -168,7 +179,7 @@ export default function Home() {
             <div className="mb-12 md:mb-20">
               <div className="flex justify-center">
                 <h2 className="text-4xl md:text-5xl font-bold mb-8 md:mb-12 text-center max-w-3xl">
-                  Your front desk is firefighting, <span className="text-gray-600">SMOVR can help.</span>
+                  Your front desk is firefighting. <span className="text-gray-600">This communication interface handles it before it hits them.</span>
                 </h2>
               </div>
               
@@ -179,7 +190,7 @@ export default function Home() {
 
               <div className="text-xl md:text-2xl space-y-2 md:space-y-3 leading-snug md:leading-relaxed">
                 <p>Most systems react <span className="font-bold">after</span> the damage is done.</p>
-                <p>SMOVR catches the breakdowns <span className="font-bold italic">before</span> they spread — without needing access to your EHR.</p>
+                <p>This communication interface catches the breakdowns <span className="font-bold italic">before</span> they spread — without needing access to your EHR.</p>
               </div>
             </div>
 
@@ -207,7 +218,7 @@ export default function Home() {
                   <div className="flex items-center gap-3">
                     <span className="text-red-500/80 text-2xl">❌</span>
                     <h3 className="text-3xl md:text-4xl font-bold bg-gradient-to-br from-gray-900 to-gray-700 bg-clip-text text-transparent">
-                      Before SMOVR
+                      Before the interface
                     </h3>
                   </div>
                 </div>
@@ -216,7 +227,7 @@ export default function Home() {
                   <div className="flex items-center gap-3">
                     <span className="text-emerald-500/80 text-2xl">✨</span>
                     <h3 className="text-3xl md:text-4xl font-bold bg-gradient-to-br from-emerald-800 to-emerald-600 bg-clip-text text-transparent">
-                      After SMOVR
+                      After the interface
                     </h3>
                   </div>
                 </div>
@@ -236,7 +247,7 @@ export default function Home() {
                     {
                       before: '"I\'m running late" → Staff scrambles or loses the slot',
                       after: {
-                        text: 'SMOVR routes them: reschedule, map, or call — no chaos',
+                        text: 'The interface routes them automatically: reschedule, map, or call — no chaos',
                         highlight: 'reschedule, map, or call'
                       }
                     },
@@ -250,42 +261,42 @@ export default function Home() {
                     {
                       before: 'Staff forgets to log a reschedule → Calendar is wrong',
                       after: {
-                        text: 'SMOVR logs it immediately — no errors, no stress',
+                        text: 'The interface logs it immediately — no errors, no stress',
                         highlight: 'no errors, no stress'
                       }
                     },
                     {
                       before: 'System "confirms" → Patient still no-shows',
                       after: {
-                        text: 'SMOVR checks intent — confirms, reroutes, or recovers',
+                        text: 'The interface checks intent — confirms, reroutes, or recovers',
                         highlight: 'checks intent'
                       }
                     },
                     {
                       before: '5 PM: no idea who canceled or rescheduled',
                       after: {
-                        text: 'SMOVR sends a daily digest — full visibility',
+                        text: 'The interface sends a daily digest — full visibility',
                         highlight: 'daily digest'
                       }
                     },
                     {
                       before: 'Staff re-enters everything manually',
                       after: {
-                        text: 'SMOVR delivers a clean, end-of-day log for fast entry—no hunting for updates',
+                        text: 'The interface delivers a clean, end-of-day log for fast entry—no hunting for updates',
                         highlight: 'end-of-day log'
                       }
                     },
                     {
                       before: 'Gaps = lost revenue → Cancellations kill the schedule',
                       after: {
-                        text: 'SMOVR reroutes cancellation into reschedule or call — in real-time',
+                        text: 'The interface reroutes cancellation into reschedule or call — in real-time',
                         highlight: 'reroutes cancellation into reschedule or call'
                       }
                     },
                     {
                       before: 'Front desk = overwhelmed + reactive',
                       after: {
-                        text: 'SMOVR runs outside the EHR — handles issues before they hit the front desk',
+                        text: 'This communication interface runs outside the EHR — handles issues before they hit the front desk',
                         highlight: ['outside the EHR', 'before']
                       }
                     }
