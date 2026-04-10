@@ -134,13 +134,13 @@ export default function Home() {
                   <svg className="w-6 h-6 mr-3 text-emerald-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
-                  <span>Setup takes 2-3 weeks depending on A2P timing.</span>
+                  <span>Setup is fast and handled for you.</span>
                 </div>
                 <div className="flex items-center text-gray-600">
                   <svg className="w-6 h-6 mr-3 text-emerald-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
-                  <span>We custom-fit your logic - no EHR disruption.</span>
+                  <span>We set everything up for you. No disruption.</span>
                 </div>
               </div>
             </div>
@@ -190,7 +190,7 @@ export default function Home() {
 
               <div className="text-xl md:text-2xl space-y-2 md:space-y-3 leading-snug md:leading-relaxed">
                 <p>Most systems react <span className="font-bold">after</span> the damage is done.</p>
-                <p>This communication interface catches the breakdowns <span className="font-bold italic">before</span> they spread — without needing access to your EHR.</p>
+                <p>This communication interface catches breakdowns <span className="font-bold italic">before</span> they spread without needing access to your EHR.</p>
               </div>
             </div>
 
@@ -282,8 +282,8 @@ export default function Home() {
                     {
                       before: 'Staff re-enters everything manually',
                       after: {
-                        text: 'The interface delivers a clean, end-of-day log for fast entry—no hunting for updates',
-                        highlight: 'end-of-day log'
+                        text: 'The interface delivers a clean end of day log for fast entry with no hunting for updates',
+                        highlight: 'end of day log'
                       }
                     },
                     {
@@ -539,7 +539,7 @@ export default function Home() {
                   </p>
 
                   <h3 className="text-2xl text-gray-900 mb-6">
-                    🛎️ SMOVR steps in like a concierge.
+                    🛎️ This communication interface steps in like a concierge.
                   </h3>
 
                   <p className="text-xl text-gray-700 mb-8 leading-relaxed">
