@@ -3,6 +3,7 @@
 import Link from "next/link"
 import A2PNav from "./A2PNav"
 import A2PFooter from "./A2PFooter"
+import ContactDetails from "./ContactDetails"
 
 export default function HomeA2P() {
   return (
@@ -24,7 +25,7 @@ export default function HomeA2P() {
             href="/contact"
             className="inline-block bg-emerald-700 text-white px-8 py-3 rounded-lg font-medium hover:bg-emerald-800 transition-colors"
           >
-            Contact Form
+            Contact us
           </Link>
         </div>
       </section>
@@ -72,35 +73,7 @@ export default function HomeA2P() {
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">Contact Us</h2>
           
-          <div className="max-w-xl mx-auto bg-white rounded-2xl p-8 shadow-sm">
-            <div className="space-y-6">
-              <div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Business Address</h3>
-                <p className="text-gray-600">
-                  253 Garth Road, Unit 5G<br />
-                  Scarsdale, NY 10583
-                </p>
-              </div>
-              
-              <div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Phone</h3>
-                <p className="text-gray-600">
-                  <a href="tel:+19179753793" className="text-emerald-700 hover:text-emerald-800">
-                    (917) 975-3793
-                  </a>
-                </p>
-              </div>
-
-              <div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Email</h3>
-                <p className="text-gray-600">
-                  <a href="mailto:kevin@smovr.com" className="text-emerald-700 hover:text-emerald-800">
-                    kevin@smovr.com
-                  </a>
-                </p>
-              </div>
-            </div>
-          </div>
+          <ContactDetails />
         </div>
       </section>
 

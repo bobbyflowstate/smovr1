@@ -10,7 +10,7 @@ export default function A2PFooter() {
         <div className="container mx-auto px-4">
           <div className="flex flex-wrap justify-center gap-6 text-sm">
             <Link href="/" className="text-gray-600 hover:text-gray-900">Home</Link>
-            <Link href="/contact" className="text-gray-600 hover:text-gray-900">Contact Form</Link>
+            <Link href="/contact" className="text-gray-600 hover:text-gray-900">Contact</Link>
             <Link href="/terms" className="text-gray-600 hover:text-gray-900">Terms of Service</Link>
             <Link href="/privacy" className="text-gray-600 hover:text-gray-900">Privacy Policy</Link>
           </div>
@@ -25,8 +25,7 @@ export default function A2PFooter() {
               This page is for general informational purposes only and does not constitute legal or medical advice.
             </p>
             <p>
-              By submitting any form on this website, you consent to receive text messages related to your inquiry. 
-              Reply STOP to opt out at any time.
+              If you opt in to receive SMS from us, reply STOP to opt out at any time.
             </p>
             <p className="pt-4 border-t border-gray-700">
               © {new Date().getFullYear()} Kevin P. Stratmann, DBA SMOVR. All rights reserved.
